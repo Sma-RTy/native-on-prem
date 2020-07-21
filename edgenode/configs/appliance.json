@@ -1,0 +1,16 @@
+{
+    "LogLevel": "info",
+    "UseSyslog": false,
+    "SyslogAddr": "",
+    "Enrollment": {
+        "Endpoint": "",
+        "CertsDirectory": "certs",
+        "ConnectionTimeout": "2s"
+    },
+    "Services": {
+        "github.com/otcshare/edgenode/pkg/eaa": "configs/eaa.json",
+        "github.com/otcshare/edgenode/pkg/ela": "configs/ela.json",
+        "github.com/otcshare/edgenode/pkg/eda": "configs/eda.json",
+        "github.com/otcshare/edgenode/pkg/eva": "configs/eva.json"
+    }
+}

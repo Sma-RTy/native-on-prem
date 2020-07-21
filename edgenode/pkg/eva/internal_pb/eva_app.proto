@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright (c) 2019 Intel Corporation
+
+syntax = "proto3";
+
+package pb;
+
+message IPApplicationLookupInfo {
+    string ipAddress = 1;
+}
+
+message IPApplicationLookupResult {
+    string appID = 1;
+}
+
+service IPApplicationLookupService {
+    rpc GetApplicationByIP (IPApplicationLookupInfo) returns (IPApplicationLookupResult) {}
+}
