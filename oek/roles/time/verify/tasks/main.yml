@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2020 Intel Corporation
+
+---
+
+- name: wait for controller's time setup with NTP
+  stat:
+    path: "{{ _ntp_time_set }}"
+  register: result
+  delegate_to: "{{ groups['controller_group'][0] }}"
+  until: result.stat.exists
+  retries: 60
+  delay: 10
+  when: ntp_enable
+
+- name: get controller's date
+  command: date +%s
+  register: controller_date
+  delegate_to: "{{ groups['controller_group'][0] }}"
+  changed_when: false
+
+- name: get node's date
+  command: date +%s
+  register: node_date
+  changed_when: false
+
+- name: calculate absolute time difference
+  set_fact:
+    difference: "{{ ((node_date.stdout | int) - (controller_date.stdout | int)) | abs }}"
+
+- name: fail if time difference exceeds threshold
+  fail:
+    msg: "The date difference between Edge Controller and Edge Node is too big. Please update time on both machines and retry the installation scripts."
+  when: (difference | int) > _date_threshold_seconds
