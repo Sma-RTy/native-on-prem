@@ -15,7 +15,7 @@ import (
 
 	"golang.org/x/net/http2"
 
-	"github.com/otcshare/common/proxy/progutil"
+	"github.com/otcshare/native-on-prem/common/proxy/progutil"
 )
 
 func TestPrefaceListenerAddr(t *testing.T) {

@@ -14,7 +14,7 @@ import (
 	"sync"
 	"time"
 
-	slog "github.com/otcshare/common/log/syslog"
+	slog "github.com/otcshare/native-on-prem/common/log/syslog"
 )
 
 // Logger implements syslog logging funcs and can be connected to a syslog

@@ -42,7 +42,9 @@ larger monolith that tags itself. This may look like
 ```
 package api
 
-import "github.com/otcshare/common/log"
+
+import "github.com/otcshare/native-on-prem/common/log"
+
 
 var log = log.DefaultLogger.WithField("component", "api")
 

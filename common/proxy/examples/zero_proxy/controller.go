@@ -8,7 +8,7 @@ package main
 import (
 	"context"
 	"fmt"
-	logger "github.com/otcshare/common/log"
+	logger "github.com/otcshare/native-on-prem/common/log"
 	"log"
 	"log/syslog"
 	"net"
