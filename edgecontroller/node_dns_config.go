@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/otcshare/edgecontroller/uuid"
+	"github.com/otcshare/native-on-prem/edgecontroller/uuid"
 )
 
 // NodeDNSConfig represents an association between a Node and a DNSConfig.

@@ -9,7 +9,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	cce "github.com/otcshare/edgecontroller"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
 )
 
 var _ = Describe("Entities: TrafficPolicyKubeOVN", func() {

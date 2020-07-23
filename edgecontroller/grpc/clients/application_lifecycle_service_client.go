@@ -6,9 +6,9 @@ package clients
 import (
 	"context"
 
-	cce "github.com/otcshare/edgecontroller"
-	"github.com/otcshare/edgecontroller/grpc"
-	evapb "github.com/otcshare/edgecontroller/pb/eva"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
+	"github.com/otcshare/native-on-prem/edgecontroller/grpc"
+	evapb "github.com/otcshare/native-on-prem/edgecontroller/pb/eva"
 	"github.com/pkg/errors"
 )
 

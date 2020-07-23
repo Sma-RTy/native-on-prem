@@ -6,8 +6,8 @@ package main
 import (
 	"context"
 	"flag"
-	logger "github.com/otcshare/common/log"
-	"github.com/otcshare/edgecontroller/nfd-master"
+	logger "github.com/otcshare/native-on-prem/common/log"
+	"github.com/otcshare/native-on-prem/edgecontroller/nfd-master"
 	"os"
 	"os/signal"
 	"syscall"

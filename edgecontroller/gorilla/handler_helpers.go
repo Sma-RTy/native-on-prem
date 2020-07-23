@@ -8,9 +8,9 @@ import (
 	"crypto/tls"
 	"fmt"
 
-	cce "github.com/otcshare/edgecontroller"
-	"github.com/otcshare/edgecontroller/grpc/node"
-	"github.com/otcshare/edgecontroller/k8s"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
+	"github.com/otcshare/native-on-prem/edgecontroller/grpc/node"
+	"github.com/otcshare/native-on-prem/edgecontroller/k8s"
 	"github.com/pkg/errors"
 )
 

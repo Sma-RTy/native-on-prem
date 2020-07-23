@@ -4,8 +4,8 @@
 package clients
 
 import (
-	cce "github.com/otcshare/edgecontroller"
-	evapb "github.com/otcshare/edgecontroller/pb/eva"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
+	evapb "github.com/otcshare/native-on-prem/edgecontroller/pb/eva"
 )
 
 func fromPBLifecycleStatus(status *evapb.LifecycleStatus) cce.LifecycleStatus {

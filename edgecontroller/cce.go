@@ -8,9 +8,9 @@ import (
 	"crypto/tls"
 	"fmt"
 
-	"github.com/otcshare/common/proxy/progutil"
-	"github.com/otcshare/edgecontroller/jose"
-	"github.com/otcshare/edgecontroller/k8s"
+	"github.com/otcshare/native-on-prem/common/proxy/progutil"
+	"github.com/otcshare/native-on-prem/edgecontroller/jose"
+	"github.com/otcshare/native-on-prem/edgecontroller/k8s"
 )
 
 // PrefaceLis Our network callback helper

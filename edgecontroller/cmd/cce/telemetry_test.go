@@ -14,8 +14,8 @@ import (
 	. "github.com/onsi/gomega"
 	. "github.com/onsi/gomega/gbytes"
 
-	"github.com/otcshare/common/log"
-	"github.com/otcshare/edgecontroller/telemetry"
+	"github.com/otcshare/native-on-prem/common/log"
+	"github.com/otcshare/native-on-prem/edgecontroller/telemetry"
 )
 
 var _ = Describe("Telemetry", func() {

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"net/http"
 
-	cce "github.com/otcshare/edgecontroller"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
 )
 
 func checkDBCreateNodesApps(

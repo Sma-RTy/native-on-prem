@@ -25,10 +25,10 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	cce "github.com/otcshare/edgecontroller"
-	"github.com/otcshare/edgecontroller/nfd-master"
-	"github.com/otcshare/edgecontroller/swagger"
-	"github.com/otcshare/edgecontroller/uuid"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
+	"github.com/otcshare/native-on-prem/edgecontroller/nfd-master"
+	"github.com/otcshare/native-on-prem/edgecontroller/swagger"
+	"github.com/otcshare/native-on-prem/edgecontroller/uuid"
 )
 
 // The following handlers are compliant to our published Swagger (OpenAPI 3.0) schema.

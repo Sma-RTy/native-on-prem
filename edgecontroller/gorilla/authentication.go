@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	cce "github.com/otcshare/edgecontroller"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
 )
 
 func authenticate(w http.ResponseWriter, r *http.Request) {

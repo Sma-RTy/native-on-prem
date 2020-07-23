@@ -6,7 +6,7 @@ package stubs
 import (
 	"context"
 	"database/sql"
-	cce "github.com/otcshare/edgecontroller"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
 )
 
 type DBStub struct {

@@ -6,8 +6,8 @@ package clients
 import (
 	"fmt"
 
-	cce "github.com/otcshare/edgecontroller"
-	elapb "github.com/otcshare/edgecontroller/pb/ela"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
+	elapb "github.com/otcshare/native-on-prem/edgecontroller/pb/ela"
 )
 
 func toPBTrafficPolicy(id string, tp *cce.TrafficPolicy) *elapb.TrafficPolicy {

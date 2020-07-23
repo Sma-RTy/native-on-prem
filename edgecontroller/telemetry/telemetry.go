@@ -11,7 +11,7 @@ import (
 	"os"
 	"sync"
 
-	logger "github.com/otcshare/common/log"
+	logger "github.com/otcshare/native-on-prem/common/log"
 )
 
 const (

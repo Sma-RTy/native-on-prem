@@ -45,10 +45,10 @@ import (
 	"google.golang.org/grpc/grpclog"
 
 	_ "github.com/go-sql-driver/mysql" // provides the mysql driver
-	cceGRPC "github.com/otcshare/edgecontroller/grpc"
-	"github.com/otcshare/edgecontroller/k8s"
-	authpb "github.com/otcshare/edgecontroller/pb/auth"
-	"github.com/otcshare/edgecontroller/swagger"
+	cceGRPC "github.com/otcshare/native-on-prem/edgecontroller/grpc"
+	"github.com/otcshare/native-on-prem/edgecontroller/k8s"
+	authpb "github.com/otcshare/native-on-prem/edgecontroller/pb/auth"
+	"github.com/otcshare/native-on-prem/edgecontroller/swagger"
 )
 
 var (
@@ -106,7 +106,7 @@ func initAuthSvcCli() {
 
 func startup() {
 	By("Building the controller")
-	exe, err := gexec.Build("github.com/otcshare/edgecontroller/cmd/cce")
+	exe, err := gexec.Build("github.com/otcshare/native-on-prem/edgecontroller/cmd/cce")
 	Expect(err).ToNot(HaveOccurred(), "Problem building service")
 
 	By("Loading environment variables from .env file")
@@ -170,7 +170,7 @@ func startup() {
 
 	By("Building the node")
 	exe, err = gexec.Build(
-		"github.com/otcshare/edgecontroller/test/node/grpc")
+		"github.com/otcshare/native-on-prem/edgecontroller/test/node/grpc")
 	Expect(err).ToNot(HaveOccurred(), "Problem building node")
 
 	cmd = exec.Command(exe)

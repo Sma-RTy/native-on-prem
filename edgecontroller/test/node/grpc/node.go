@@ -22,12 +22,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/otcshare/common/log"
-	"github.com/otcshare/common/proxy/progutil"
-	nodegmock "github.com/otcshare/edgecontroller/mock/node/grpc"
-	elapb "github.com/otcshare/edgecontroller/pb/ela"
-	evapb "github.com/otcshare/edgecontroller/pb/eva"
-	"github.com/otcshare/edgecontroller/pki"
+	"github.com/otcshare/native-on-prem/common/log"
+	"github.com/otcshare/native-on-prem/common/proxy/progutil"
+	nodegmock "github.com/otcshare/native-on-prem/edgecontroller/mock/node/grpc"
+	elapb "github.com/otcshare/native-on-prem/edgecontroller/pb/ela"
+	evapb "github.com/otcshare/native-on-prem/edgecontroller/pb/eva"
+	"github.com/otcshare/native-on-prem/edgecontroller/pki"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )

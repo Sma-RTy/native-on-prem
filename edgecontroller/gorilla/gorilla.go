@@ -11,8 +11,8 @@ import (
 	"strings"
 
 	"github.com/gorilla/mux"
-	logger "github.com/otcshare/common/log"
-	cce "github.com/otcshare/edgecontroller"
+	logger "github.com/otcshare/native-on-prem/common/log"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
 )
 
 var log = logger.DefaultLogger.WithField("pkg", "gorilla")

@@ -21,10 +21,10 @@ import (
 	"google.golang.org/grpc/peer"
 	"google.golang.org/grpc/status"
 
-	cce "github.com/otcshare/edgecontroller"
-	authpb "github.com/otcshare/edgecontroller/pb/auth"
-	evapb "github.com/otcshare/edgecontroller/pb/eva"
-	"github.com/otcshare/edgecontroller/uuid"
+	cce "github.com/otcshare/native-on-prem/edgecontroller"
+	authpb "github.com/otcshare/native-on-prem/edgecontroller/pb/auth"
+	evapb "github.com/otcshare/native-on-prem/edgecontroller/pb/eva"
+	"github.com/otcshare/native-on-prem/edgecontroller/uuid"
 )
 
 const (

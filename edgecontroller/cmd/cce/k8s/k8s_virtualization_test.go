@@ -16,8 +16,8 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	cceGRPC "github.com/otcshare/edgecontroller/grpc"
-	evapb "github.com/otcshare/edgecontroller/pb/eva"
+	cceGRPC "github.com/otcshare/native-on-prem/edgecontroller/grpc"
+	evapb "github.com/otcshare/native-on-prem/edgecontroller/pb/eva"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )

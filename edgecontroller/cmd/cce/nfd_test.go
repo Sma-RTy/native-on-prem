@@ -6,8 +6,8 @@ package main_test
 import (
 	"fmt"
 
-	"github.com/otcshare/edgecontroller/swagger"
-	"github.com/otcshare/edgecontroller/uuid"
+	"github.com/otcshare/native-on-prem/edgecontroller/swagger"
+	"github.com/otcshare/native-on-prem/edgecontroller/uuid"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"
