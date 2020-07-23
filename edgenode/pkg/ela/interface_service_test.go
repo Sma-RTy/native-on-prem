@@ -14,9 +14,9 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/otcshare/common/proxy/progutil"
-	"github.com/otcshare/edgenode/pkg/ela"
-	pb "github.com/otcshare/edgenode/pkg/ela/pb"
+	"github.com/otcshare/native-on-prem/common/proxy/progutil"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/ela"
+	pb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

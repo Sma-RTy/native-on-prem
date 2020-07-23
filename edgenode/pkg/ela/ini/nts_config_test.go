@@ -10,8 +10,8 @@ import (
 	. "github.com/onsi/gomega"
 	"io/ioutil"
 
-	. "github.com/otcshare/edgenode/pkg/ela/ini"
-	pb "github.com/otcshare/edgenode/pkg/ela/pb"
+	. "github.com/otcshare/native-on-prem/edgenode/pkg/ela/ini"
+	pb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
 )
 
 var _ = Describe("NtsConfig", func() {

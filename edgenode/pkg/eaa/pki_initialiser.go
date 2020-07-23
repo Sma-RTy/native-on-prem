@@ -19,7 +19,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/otcshare/edgenode/pkg/auth"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/auth"
 
 	"github.com/pkg/errors"
 )

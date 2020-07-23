@@ -10,8 +10,8 @@ import (
 	"io/ioutil"
 	"time"
 
-	logger "github.com/otcshare/common/log"
-	"github.com/otcshare/edgenode/internal/wrappers"
+	logger "github.com/otcshare/native-on-prem/common/log"
+	"github.com/otcshare/native-on-prem/edgenode/internal/wrappers"
 
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/container"

@@ -10,7 +10,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/otcshare/edgenode/pkg/edgedns/pb"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/edgedns/pb"
 	"google.golang.org/grpc"
 )
 

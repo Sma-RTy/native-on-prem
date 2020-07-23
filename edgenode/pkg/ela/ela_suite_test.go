@@ -10,9 +10,9 @@ import (
 	"os"
 	"testing"
 
-	log "github.com/otcshare/common/log"
-	"github.com/otcshare/edgenode/internal/authtest"
-	"github.com/otcshare/edgenode/pkg/ela"
+	log "github.com/otcshare/native-on-prem/common/log"
+	"github.com/otcshare/native-on-prem/edgenode/internal/authtest"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/ela"
 	"google.golang.org/grpc/credentials"
 
 	"time"

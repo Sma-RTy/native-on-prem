@@ -10,8 +10,8 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/otcshare/edgenode/pkg/ela/ini"
-	pb "github.com/otcshare/edgenode/pkg/ela/pb"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/ela/ini"
+	pb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
 	"github.com/pkg/errors"
 
 	"github.com/docker/docker/api/types"

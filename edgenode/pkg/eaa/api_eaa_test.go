@@ -23,7 +23,7 @@ import (
 	. "github.com/onsi/gomega"
 
 	"github.com/gorilla/websocket"
-	"github.com/otcshare/edgenode/pkg/eaa"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/eaa"
 )
 
 const (

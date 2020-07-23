@@ -12,11 +12,11 @@ import (
 	"syscall"
 	"time"
 
-	logger "github.com/otcshare/common/log"
-	edgedns "github.com/otcshare/edgenode/pkg/edgedns"
-	"github.com/otcshare/edgenode/pkg/edgedns/grpc"
-	"github.com/otcshare/edgenode/pkg/edgedns/storage"
-	"github.com/otcshare/edgenode/pkg/util"
+	logger "github.com/otcshare/native-on-prem/common/log"
+	edgedns "github.com/otcshare/native-on-prem/edgenode/pkg/edgedns"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/edgedns/grpc"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/edgedns/storage"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/util"
 )
 
 var log = logger.DefaultLogger.WithField("main", nil)

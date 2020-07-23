@@ -22,8 +22,8 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/otcshare/edgenode/pkg/auth"
-	"github.com/otcshare/edgenode/pkg/eaa"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/auth"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/eaa"
 )
 
 // PrepareCertificateRequestTemplate prepares a template

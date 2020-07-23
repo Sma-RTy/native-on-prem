@@ -6,9 +6,9 @@
 package main
 
 import (
-	"github.com/otcshare/edgenode/pkg/ela"
-	"github.com/otcshare/edgenode/pkg/eva"
-	"github.com/otcshare/edgenode/pkg/service"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/ela"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/eva"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/service"
 )
 
 // EdgeServices array contains function pointers to services start functions

@@ -10,7 +10,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	pb "github.com/otcshare/edgenode/pkg/ela/pb"
+	pb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
 )
 
 func gtpFilterToString(gtp *pb.GTPFilter, source bool) (string, error) {

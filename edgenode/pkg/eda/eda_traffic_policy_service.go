@@ -8,9 +8,9 @@ import (
 	"net"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/otcshare/edgenode/pkg/edants"
-	"github.com/otcshare/edgenode/pkg/ela/ini"
-	pb "github.com/otcshare/edgenode/pkg/ela/pb"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/edants"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/ela/ini"
+	pb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc/codes"

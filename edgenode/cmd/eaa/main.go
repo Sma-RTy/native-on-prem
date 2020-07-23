@@ -7,8 +7,8 @@ import (
 	"os"
 
 	// Imports required to run agent
-	"github.com/otcshare/edgenode/pkg/eaa"
-	"github.com/otcshare/edgenode/pkg/service"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/eaa"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/service"
 )
 
 // EdgeServices array contains function pointers to services start functions

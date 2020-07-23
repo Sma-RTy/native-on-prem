@@ -13,11 +13,11 @@ import (
 	libvirt "github.com/libvirt/libvirt-go"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/otcshare/edgenode/internal/metadatahelpers"
-	"github.com/otcshare/edgenode/internal/stubs"
-	"github.com/otcshare/edgenode/internal/wrappers"
-	"github.com/otcshare/edgenode/pkg/eva"
-	evapb "github.com/otcshare/edgenode/pkg/eva/pb"
+	"github.com/otcshare/native-on-prem/edgenode/internal/metadatahelpers"
+	"github.com/otcshare/native-on-prem/edgenode/internal/stubs"
+	"github.com/otcshare/native-on-prem/edgenode/internal/wrappers"
+	"github.com/otcshare/native-on-prem/edgenode/pkg/eva"
+	evapb "github.com/otcshare/native-on-prem/edgenode/pkg/eva/pb"
 	"google.golang.org/grpc"
 )
 
