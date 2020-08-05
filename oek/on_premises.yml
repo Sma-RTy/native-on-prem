@@ -23,6 +23,8 @@
     - role: openness/master
     - role: nfd/master
       when: onprem_nfd_enable | default(True)
+    - role: ngc_test/onprem/master
+      when: epcforedge_git_repo is defined
     - role: apache
 
 - hosts: edgenode_group
@@ -60,3 +62,4 @@
       when: onprem_hddl_enable | default(False)
     - role: nfd/worker
       when: onprem_nfd_enable | default(True)
+      when: epcforedge_git_repo is defined
