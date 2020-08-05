@@ -29,7 +29,7 @@
 - name: up syslog container
   command: "docker-compose up -d --no-build syslog-ng"
   args:
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
   environment:
     REMOTE_SYSLOG_IP: "{{ _remote_syslog_ip }}"
     VER: "{{ _docker_containers_ver }}"
@@ -38,7 +38,7 @@
 - name: up edgednssvr container
   command: "docker-compose up --no-start --no-build edgednssvr"
   args:
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
   environment:
     LOCAL_SYSLOG_IP: "192.168.122.1"
     VER: "{{ _docker_containers_ver }}"
@@ -48,7 +48,7 @@
 - name: start edgednssvr container
   command: "docker-compose up --no-build --detach edgednssvr"
   args:
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
   environment:
     LOCAL_SYSLOG_IP: "192.168.122.1"
     VER: "{{ _docker_containers_ver }}"
@@ -58,7 +58,7 @@
 - name: up EAA container
   command: "docker-compose up -d --no-build eaa"
   args:
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
   environment:
     VER: "{{ _docker_containers_ver }}"
   changed_when: true
@@ -66,7 +66,7 @@
 - name: up appliance container
   command: "docker-compose up -d --no-build appliance"
   args:
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
   environment:
     VER: "{{ _docker_containers_ver }}"
     HOSTNAME: "{{ ansible_hostname }}"
@@ -95,7 +95,7 @@
 - name: store verification key in folder repository folder
   copy:
     content: "{{ verification_key }}"
-    dest: "{{ _git_repo_dest }}/verification_key.txt"
+    dest: "{{ _sync_sources_dest }}/verification_key.txt"
 
 - name: add the node to controller's db
   include_tasks: subtasks/add_node_to_controller_db.yml

@@ -65,12 +65,12 @@
   block:
   - name: create artifacts/controller/cni directory
     file:
-      path: "{{ _git_repo_dest }}/artifacts/controller/cni"
+      path: "{{ _sync_sources_dest }}/artifacts/controller/cni"
       state: directory
   - name: copy config files to edgecontroller/artifacts/controller/cni
     copy:
       src: "{{ item }}"
-      dest: "{{ _git_repo_dest }}/artifacts/controller/cni"
+      dest: "{{ _sync_sources_dest }}/artifacts/controller/cni"
     with_items:
     - cni_args.json
     - cni.conf

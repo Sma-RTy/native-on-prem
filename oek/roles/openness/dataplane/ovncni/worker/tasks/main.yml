@@ -63,14 +63,14 @@
   - name: build ovn cni executable
     shell: source /etc/profile && make ovncni
     args:
-      chdir: "{{ _git_repo_dest }}"
+      chdir: "{{ _sync_sources_dest }}"
   - name: create /opt/cni/bin/
     file:
       path: /opt/cni/bin/
       state: directory
   - name: copy ovn cni to /opt/cni/bin/ovn
     copy:
-      src: "{{ _git_repo_dest }}/dist/ovncni/ovncni"
+      src: "{{ _sync_sources_dest }}/dist/ovncni/ovncni"
       dest: /opt/cni/bin/ovn
       remote_src: yes
       mode: '0755'

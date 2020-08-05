@@ -17,7 +17,7 @@
     - role: time/ntp
       when: ntp_enable | default(False)
     - role: docker
-    - role: git_repo
+    - role: sync_sources
     - role: golang
 
     - role: openness/master
@@ -52,7 +52,7 @@
     - role: libvirt
     - role: qemu
     - role: sriov_device_init
-    - role: git_repo
+    - role: sync_sources
     - role: interapp_ovs
       when: onprem_iac_enable | default(False)
     - role: openness/worker

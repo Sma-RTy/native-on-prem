@@ -6,16 +6,16 @@
 - name: customize EVA config - Enable OVS
   shell: >
     set -o pipefail &&
-    jq '.OpenvSwitch=true | .OpenvSwitchBridge="{{ _ovs_bridge_name }}"' {{ _git_repo_dest }}/configs/eva.json |
-    sponge {{ _git_repo_dest }}/configs/eva.json
+    jq '.OpenvSwitch=true | .OpenvSwitchBridge="{{ _ovs_bridge_name }}"' {{ _sync_sources_dest }}/configs/eva.json |
+    sponge {{ _sync_sources_dest }}/configs/eva.json
   args:
   changed_when: true
 
 - name: customize ELA config - add blacklisted ports
   shell: >
     set -o pipefail &&
-    jq '.PCIBlacklist +=  ["{{ item }}"]'  {{ _git_repo_dest }}/configs/ela.json |
-    sponge {{ _git_repo_dest }}/configs/ela.json
+    jq '.PCIBlacklist +=  ["{{ item }}"]'  {{ _sync_sources_dest }}/configs/ela.json |
+    sponge {{ _sync_sources_dest }}/configs/ela.json
   args:
   loop: "{{ ovs_ports }}"
   changed_when: true

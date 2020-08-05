@@ -4,39 +4,39 @@
 ---
 - name: check if a backup of original .env file already exists
   stat:
-    path: "{{ _git_repo_dest }}/.env.ansible.backup"
+    path: "{{ _sync_sources_dest }}/.env.ansible.backup"
   register: env_backup_file
 
 - name: make a backup of original .env file if backup is missing
   copy:
-    src: "{{ _git_repo_dest }}/.env"
-    dest: "{{ _git_repo_dest }}/.env.ansible.backup"
+    src: "{{ _sync_sources_dest }}/.env"
+    dest: "{{ _sync_sources_dest }}/.env.ansible.backup"
     remote_src: yes
   when: not env_backup_file.stat.exists
 
 - name: generate .env file
   template:
     src: .env.j2
-    dest: "{{ _git_repo_dest }}/.env"
+    dest: "{{ _sync_sources_dest }}/.env"
 
 - name: online build controller docker images
   block:
     - name: create temporary custom .openness_gitconfig
-      include_tasks: ../../../git_repo/tasks/gitconfig_bootstrap.yml
+      include_tasks: ../../../sync_sources/tasks/gitconfig_bootstrap.yml
     - name: build controller docker images
       make:
-        chdir: "{{ _git_repo_dest }}"
+        chdir: "{{ _sync_sources_dest }}"
         target: build
       register: build_controller_output
     - debug:
         msg: "{{ build_controller_output.stdout }}"
   always:
     - name: remove temporary .openness_gitconfig
-      include_tasks: ../../../git_repo/tasks/gitconfig_remove.yml
+      include_tasks: ../../../sync_sources/tasks/gitconfig_remove.yml
 
 - name: start controller
   make:
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
     target: all-up
   register: start_controller_output
 

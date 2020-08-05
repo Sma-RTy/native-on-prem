@@ -36,14 +36,10 @@ os_remove_yum_plugins: true
 ##################################################
 ##### On Premises
 
-### OpenNESS Git Repositories
-# Following variables specify branch/SHA/tag to be checked out for Edge Controller and Edge Node repositories
-controller_repository_branch: master
-edgenode_repository_branch: master
-
-# If True, the repository will be deleted and cloned again
-# If False, repository will be left as it is and any changes won't be overwritten.
-always_clean_repository: True
+### OpenNESS Git Directories (edgenode, edgecontroller)
+# If True, then sources will be copied/updated
+# If False, sources will be left as it is and any changes won't be overwritten.
+always_copy_sources: True
 
 ### Network Time Protocol (NTP)
 # Enable machine's time synchronization with NTP server

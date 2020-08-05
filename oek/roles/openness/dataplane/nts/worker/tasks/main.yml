@@ -17,14 +17,14 @@
 
 - name: copy nts.cfg -> /var/lib/appliance/nts/nts.cfg
   copy:
-    src: "{{ _git_repo_dest }}/internal/nts/nts.cfg"
+    src: "{{ _sync_sources_dest }}/internal/nts/nts.cfg"
     dest: /var/lib/appliance/nts/nts.cfg
     remote_src: yes
 
 - name: build NTS container
   make:
     target: nts
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
     params:
       RTE_SDK: "{{ ansible_local.dpdk._dpdk_install_dir }}"
       RTE_TARGET: "{{ _dpdk_make_target }}"
@@ -37,7 +37,7 @@
 - name: up nts container
   command: "docker-compose up --no-start --no-build nts"
   args:
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
   environment:
     VER: "{{ _docker_containers_ver }}"
     OVSE: "{{ onprem_iac_enable | default(False) }}"

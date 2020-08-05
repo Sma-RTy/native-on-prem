@@ -8,7 +8,7 @@
 
 - name: build cleanup
   make:
-    chdir: "{{ _git_repo_dest }}"
+    chdir: "{{ _sync_sources_dest }}"
     target: clean
     params:
       RTE_SDK: "{{ ansible_local.dpdk._dpdk_install_dir }}"

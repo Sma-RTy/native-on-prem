@@ -71,5 +71,5 @@ os_yum_base_packages:
   moreutils,jq,python-devel,createrepo,psmisc,bash-completion,rsync,openssl11"
 _os_yum_exclude_rpm_packages: "exclude=kernel-3* kernel-rt* kernel-rt-kvm* kernel-rt-devel*"
 
-git_repo_url: https://{{ git_repo_token }}@github.com/otcshare/edgenode.git
-_git_repo_dest: /opt/edgenode
+_sync_sources_dir: "{{ playbook_dir }}/../edgenode"
+_sync_sources_dest: /opt/edgenode
