@@ -6,8 +6,8 @@ package main
 // This CNI relies on a preconfigured OVN infrastructure.
 // Prior to calling ADD request it is required to configure the logical OVN interface with appID used as its ID
 // After calling DEL request it is required to remove the logical OVN interface with appID used as its ID
-// "github.com/otcshare/native-on-prem/edgenode/pkg/ovncni" package provides helper functions that could be used for creating
-// and removing the port: CreatePort/DeletePort
+// "github.com/otcshare/native-on-prem/edgenode/pkg/ovncni" package provides helper functions
+// that could be used for creating and removing the port: CreatePort/DeletePort
 //
 // Currently this CNI has to be the first one in a chain
 //
