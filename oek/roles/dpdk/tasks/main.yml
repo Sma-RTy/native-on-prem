@@ -55,7 +55,7 @@
   get_url:
     url: "{{ _dpdk_download_url }}"
     dest: "{{ _dpdk_download_dest }}"
-    checksum: "md5:{{ _dpdk_checksum }}"
+    checksum: "sha384:{{ _dpdk_checksum }}"
   register: result
   retries: "{{ number_of_retries }}"
   until: result is succeeded

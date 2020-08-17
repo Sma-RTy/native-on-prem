@@ -5,7 +5,7 @@ package grpc
 
 import (
 	"context"
-	"crypto/md5" //nolint:gosec
+	"crypto/sha512"
 	"crypto/tls"
 	"crypto/x509"
 	"crypto/x509/pkix"
@@ -163,9 +163,9 @@ func (s *Server) RequestCredentials(ctx context.Context, id *authpb.Identity) ( 
 		return nil, status.Errorf(codes.InvalidArgument, "error validating CSR: %v", err)
 	}
 
-	// Node's identity is base64-encoded (w/o padding) MD5 hash of the public key data
+	// Node's identity is base64-encoded (w/o padding) SHA-384 hash of the public key data
 	// gosec: not hashing user input/passwords
-	hash := md5.Sum(certReq.RawSubjectPublicKeyInfo) //nolint:gosec
+	hash := sha512.Sum384(certReq.RawSubjectPublicKeyInfo)
 	serial := base64.RawURLEncoding.EncodeToString(hash[:])
 
 	// Verify the Node's pre-approval by public key data

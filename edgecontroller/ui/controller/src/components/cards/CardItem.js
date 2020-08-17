@@ -211,7 +211,7 @@ class CardItem extends Component {
                 </Avatar>
               </div>
               <div className={classes.baseline}>
-                <Grid container wrap="nowrap" direction="row" justify="space-between" alignItems="flex-start">
+                <Grid container direction="row" justify="space-between" alignItems="flex-start">
                   {displayCardData()}
                 </Grid>
               </div>

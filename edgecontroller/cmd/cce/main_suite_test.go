@@ -8,7 +8,7 @@ import (
 	"context"
 	"crypto/ecdsa"
 	"crypto/elliptic"
-	"crypto/md5" //nolint:gosec
+	"crypto/sha512"
 	"crypto/rand"
 	"crypto/tls"
 	"crypto/x509"
@@ -453,7 +453,7 @@ func createAndRegisterNode() *nodeConfig {
 		})
 
 	By("Pre-approving Node by serial")
-	hash := md5.Sum(certReq.RawSubjectPublicKeyInfo) //nolint:gosec
+	hash := sha512.Sum384(certReq.RawSubjectPublicKeyInfo)
 	serial := base64.RawURLEncoding.EncodeToString(hash[:])
 	nodeID := postNodesSerial(serial)
 

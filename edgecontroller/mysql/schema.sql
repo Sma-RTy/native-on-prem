@@ -14,7 +14,7 @@ USE controller_ce
 CREATE TABLE nodes (
     id VARCHAR(36) GENERATED ALWAYS AS (entity->>'$.id') STORED UNIQUE KEY,
     -- TODO add UNIQUE KEY on serial - will require refactoring the tests
-    serial VARCHAR(36) GENERATED ALWAYS AS (entity->>'$.serial') STORED,
+    serial VARCHAR(128) GENERATED ALWAYS AS (entity->>'$.serial') STORED,
     entity JSON
 );
 

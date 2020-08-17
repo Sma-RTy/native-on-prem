@@ -66,7 +66,7 @@ So how does the user know what to input when they're adding the Node to the Cont
 ### Computing the Node's identity (serial)
 We want to give the user something relatively compact to input into the Controller when adding the Node. Normally, the public key of the Node would be a great candidate for an identifier, since it's unique. Unfortunately, public keys are not super portable as plain text (they're better in TLS transport). As such, we perform a computation of the public key of the Node to generate the Node's "serial." The following is the computation performed:
 
-1. Compute the md5 sum of the raw DER-encoded public key
+1. Compute the sha384 sum of the raw DER-encoded public key
 2. Compute the base 64 URL-encoding (_without padding_) of the results from above
 
 This results in a URL-friendly serial identifier of the node. Both the Node and the Controller need to use the same computation so that it can check for a match.

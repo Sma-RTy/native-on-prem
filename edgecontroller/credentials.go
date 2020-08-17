@@ -4,7 +4,7 @@
 package cce
 
 import (
-	"crypto/md5" //nolint:gosec
+	"crypto/sha512"
 	"crypto/x509"
 	"encoding/base64"
 	"encoding/pem"
@@ -17,7 +17,7 @@ import (
 // credentials. These credentials may be used to further communicate with
 // endpoint(s) that are protected by a form of authentication.
 type Credentials struct {
-	// ID is the base64-encoded MD5 hash of the certificate's public key.
+	// ID is the base64-encoded SHA-384 hash of the certificate's public key.
 	ID string `json:"id"`
 	// Certificate is a PEM-encoded X.509 certificate.
 	Certificate string `json:"certificate"`
@@ -63,7 +63,7 @@ func (c *Credentials) Validate() error {
 	}
 
 	// gosec: not hashing user input/passwords
-	hash := md5.Sum(pubKey) //nolint:gosec
+	hash := sha512.Sum384(pubKey)
 
 	if c.ID != base64.RawURLEncoding.EncodeToString(hash[:]) {
 		return errors.New("id not derived from certificate public key")
