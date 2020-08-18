@@ -11,8 +11,8 @@ import (
 
 	"crypto/ecdsa"
 	"crypto/elliptic"
-	"crypto/sha512"
 	"crypto/rand"
+	"crypto/sha512"
 	"crypto/x509"
 	"database/sql"
 	"encoding/base64"
