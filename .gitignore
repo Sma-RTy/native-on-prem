@@ -35,3 +35,6 @@ certificates/
 
 # Runtime artifacts
 artifacts/
+
+# Distributables folder
+sample-app/build
