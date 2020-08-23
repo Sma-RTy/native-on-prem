@@ -1,0 +1,21 @@
+@startuml robot_component
+
+ssh - [VMs]
+
+[Virtualization] <<python lib>>
+[libvirt] <<python lib>>
+[Other Libs] <<python lib>>
+[Robot Tests] ..> [Openness\nExperience Kits]: uses
+[Robot Tests] ..> [Virtualization]: uses
+[Virtualization] ..> [libvirt]: uses
+[Robot Tests] ..> [Other Libs]: uses
+
+[libvirt] ..> [qemu]: uses
+[qemu] -> [VMs]: manages
+
+[Robot Tests] --> ssh
+[Openness\nExperience Kits] --> ssh
+[Other Libs] --> ssh
+[Virtualization] --> ssh
+
+@enduml

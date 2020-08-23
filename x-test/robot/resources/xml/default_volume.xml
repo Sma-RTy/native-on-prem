@@ -1,0 +1,16 @@
+<volume type='file'>
+  <name>test.qcow2</name>
+  <key>/var/lib/libvirt/images/test.qcow2</key>
+  <allocation>0</allocation>
+  <capacity unit='bytes'>42949672960</capacity>
+  <target>
+    <path>/var/lib/libvirt/images/test.qcow2</path>
+    <format type='qcow2'/>
+    <permissions>
+      <owner>107</owner>
+      <group>107</group>
+      <mode>0600</mode>
+      <label>virt_image_t</label>
+    </permissions>
+  </target>
+</volume>
