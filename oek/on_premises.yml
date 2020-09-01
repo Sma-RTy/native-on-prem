@@ -62,4 +62,3 @@
       when: onprem_hddl_enable | default(False)
     - role: nfd/worker
       when: onprem_nfd_enable | default(True)
-      when: epcforedge_git_repo is defined
