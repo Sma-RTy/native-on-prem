@@ -16,8 +16,8 @@ source scripts/task_log_file.sh
 source scripts/parse_args.sh
 
 filter=${1:-}
-limit=$(get_limit $filter)
+limit=$(get_limit "$filter")
 
 ansible-playbook -vv \
     ./on_premises.yml \
-    --inventory inventory.ini ${limit}
+    --inventory inventory.ini "${limit}"

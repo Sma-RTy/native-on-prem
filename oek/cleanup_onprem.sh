@@ -12,4 +12,4 @@ limit=$(get_limit "${filter}")
 
 ansible-playbook -vv \
     ./on_premises_cleanup.yml \
-    --inventory inventory.ini ${limit}
+    --inventory inventory.ini "${limit}"
