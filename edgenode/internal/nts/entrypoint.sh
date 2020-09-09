@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # SPDX-License-Identifier: Apache-2.0
-# Copyright (c) 2019 Intel Corporation
+# Copyright (c) 2019-2020 Intel Corporation
 
 
 NTS_SOCKET0_MEM="${NTS_SOCKET0_MEM:-2048}"
@@ -29,7 +29,7 @@ exec ./nes-daemon \
     --lcores='(0,3,4,5)@0,1@2,2@3' \
     --huge-dir /hugepages \
     --file-prefix=vhost-1 \
-    --socket-mem ${NTS_SOCKET0_MEM},${NTS_SOCKET1_MEM} \
+    --socket-mem "${NTS_SOCKET0_MEM}","${NTS_SOCKET1_MEM}" \
     -- \
     /var/lib/appliance/nts/nts.cfg &
 nts_pid="$!"
@@ -42,7 +42,5 @@ kni_pid="$!"
 exec ./ovs_docker_daemon.py \
     --bridge "${OVS_BRIDGE_NAME}" \
     --enable "${OVS_ENABLED}" &
-ovs_pid="$!"
 
 wait $nts_pid
-

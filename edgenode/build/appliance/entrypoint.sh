@@ -26,10 +26,9 @@ else
     msg="Controller's Root CA not found. Put it into: /etc/pki/tls/certs/controller-root-ca.pem"
     echo "${msg}"
     logger \
-        --server ${SYSLOG_ADDR} \
+        --server "${SYSLOG_ADDR}" \
         --tag "${BASENAME}" \
         "${msg}"
 fi
 
-HTTP_PROXY= HTTPS_PROXY= http_proxy= https_proxy= exec ./appliance
-
+HTTP_PROXY='' HTTPS_PROXY='' http_proxy='' https_proxy='' exec ./appliance
