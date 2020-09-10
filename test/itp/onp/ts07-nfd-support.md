@@ -37,7 +37,7 @@ Verify that Node Feature Discovery is installed after running automated setup of
 ### Test steps
 
 1. Configure ansible for NFD (NFD feature is enabled by default):
-    - Make sure that `onprem_nfd_enable` is set to "True" in `group_vars/all/10-default.yml`
+    - Make sure that `onprem_nfd_enable` is set to "True" in `oek/group_vars/all/10-default.yml`
 
 2. Deploy OpenNESS platform in OnPrem mode as in test cases: [ITP/ONP/01/01: Deploy Edge Controller in OnPrem mode](https://github.com/otcshare/native-on-prem/test/blob/master/itp/onp/ts01-platform-setup.md#itponp0101-deploy-edge-controller-in-onprem-mode), Edge Node in OnPrem Mode set-up, running and enrolled as described in [ITP/ONP/01/02: Deploy and Enroll Edge Node in OnPrem mode](https://github.com/otcshare/native-on-prem/test/blob/master/itp/onp/ts01-platform-setup.md#itponp0102-deploy-and-enroll-edge-node-in-onprem-mode)
 

@@ -37,7 +37,7 @@ Edge Controller and Edge Nodes in On Premises mode are deployed with OVN CNI as 
 
 ### Test steps
 
-1. Modify `onprem_dataplane` variable in `group_vars/all/10-default.yml`:
+1. Modify `onprem_dataplane` variable in `oek/group_vars/all/10-default.yml`:
    ```yaml
    onprem_dataplane: "ovncni"
    ```

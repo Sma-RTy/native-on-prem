@@ -42,14 +42,14 @@ Test walks through controller deployment procedure and asserts that
 
 ### Prerequisites
 
-* Repository otcshare/openness-experience-kits checked out
-* One host added to the *controller_group* in `inventory.ini` file (refer to “Hosts/inventory preparation” information above)
-* group_vars/all/10-default.yml is set up according to the network (proxy_* and git_repo_token vars)
+* Repository `otcshare/native-on-prem` checked out
+* One host added to the *controller_group* in `oek/inventory.ini` file (refer to “Hosts/inventory preparation” information above)
+* `oek/group_vars/all/10-default.yml` is set up according to the network (proxy_* and git_repo_token vars)
 * ssh key must be copied to host (`ssh-copy-id root@<edgecontroller_ip_from_inventory>`)
 
 ### Test steps
 
-1. Execute script: `./deploy_onprem.sh controller`
+1. From `oek` directory execute script: `./deploy_onprem.sh controller`
 2. Script should finish with success
 3. If script was successful, check following things on the controller:
    - Verification of os_setup role
@@ -112,7 +112,7 @@ Test walks through controller deployment procedure and asserts that
      3. check if UI is running by putting CONTROLLER_IP:3000 to web browser and verify that it is possible to log in to controller UI
 
    - Verification of git_repo role
-     1. `otcshare/edgecontroller` repository should be available in `/opt/edgecontroller`. It should be up to date with remote `otcshare/edgecontroller` repository (checkout commit should be compliant with commit/tag given in *git_repo_branch* variable in `native-on-prem/oek/group_vars/edgenode_group/10-default.yml`)
+     1. `edgecontroller` folder should be available in `/opt/edgecontroller`.
 
 ---
 
@@ -129,19 +129,19 @@ Test walks through node deployment procedure and asserts that
 
 ### Prerequisites
 
-* Repository otcshare/native-on-prem checked out
-* One host added to the *edgenodes_group* in `inventory.ini` file (refer to “Hosts/inventory preparation” information above)
-* group_vars/all/10-default.yml is set up according to the network (proxy_* and git_repo_token vars)
+* Repository `otcshare/native-on-prem` checked out
+* One host added to the *edgenodes_group* in `oek/inventory.ini` file (refer to “Hosts/inventory preparation” information above)
+* `oek/group_vars/all/10-default.yml` is set up according to the network (proxy_* and git_repo_token vars)
 * ssh key must be copied to host (`ssh-copy-id root@<edgenode_ip_from_inventory>`))
 * Controller deployment done as in [ITP/ONP/01/01: Deploy Edge Controller in OnPrem mode](#itponp0101-deploy-edge-controller-in-onprem-mode)
 
 ### Test steps
 
-1. Execute script: `./deploy_onprem.sh node`
+1. From `oek` directory execute script: `./deploy_onprem.sh node`
 2. Script should finish with success
 3. If script was successful, check following things on the worker/node:
    - os_setup role verification
-     1. `/etc/environment` should contain shell vars for proxy according to the one set in `group_vars/all/10-default.yml`
+     1. `/etc/environment` should contain shell vars for proxy according to the one set in `oek/group_vars/all/10-default.yml`
 
    - git_repo role verification
 
@@ -216,14 +216,13 @@ Setup node with different RT kernel, grub parameters & tuned profiles.
 * Edge Controller already set up
 * Inventory: one node (`node01`) added.
 * Nodes should be CentOS 18.10 minimal
-* `group_vars/all/10-default.yml` is set up according to the network (`proxy_*` and `git_repo_token` vars)
+* `oek/group_vars/all/10-default.yml` is set up according to the network (`proxy_*` and `git_repo_token` vars)
 * SSH key must be copied to host (`ssh-copy-id`)
 
 ### Test steps
 
-
 1. Configure node - newer realtime kernel, no tuned profile, additional debug parameter and less hugepages.<br>
-   Insert following lines to `host_vars/node01.yml` file:
+   Insert following lines to `oek/host_vars/node01.yml` file:
    ```yaml
    kernel_version: 3.10.0-1062.9.1.rt56.1033.el7.x86_64
    tuned_skip: true
@@ -231,7 +230,7 @@ Setup node with different RT kernel, grub parameters & tuned profiles.
    hugepage_amount: "500"
    ```
 
-2. Run `./deploy_onprem.sh node` and wait until script finishes. It should end with success.
+2. From `oek` directory execute script `./deploy_onprem.sh node` and wait until script finishes. It should end with success.
 3. Verify deployment of the node
    - `uname -r` should display `3.10.0-1062.9.1.rt56.1033.el7.x86_64`
    - `tuned-adm active` **should not** display `Current active profile: realtime` (it might be `virtual-guest` if it's a VM or different if it's a physical machine)
@@ -253,7 +252,7 @@ Setup node with different non-RT kernel, grub parameters & tuned profiles.
 
 
 1. Configure node - newer non-rt kernel, balanced tuned profile, no intel iommu and less hugepages<br>
-   Insert following lines to `host_vars/node01.yml` file:
+   Insert following lines to `oek/host_vars/node01.yml` file:
     ```yaml
     kernel_repo_url: ""
     kernel_package: kernel
@@ -271,7 +270,7 @@ Setup node with different non-RT kernel, grub parameters & tuned profiles.
     dpdk_kernel_devel: ""
     ```
 
-2. Run `./deploy_onprem.sh node` and wait until script finishes. It should end with success.
+2. From `oek` directory execute script `./deploy_onprem.sh node` and wait until script finishes. It should end with success.
 3. Verify deployment of the node
    - `uname -r` should display `3.10.0-1062.el7.x86_64`
    - `tuned-adm active` should display `Current active profile: balanced`

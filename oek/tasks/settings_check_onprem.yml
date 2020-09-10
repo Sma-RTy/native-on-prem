@@ -20,7 +20,7 @@
   fail:
     msg: |
       Inter-App Communication (IAC) feature is not supported together with OVNCNI dataplane.
-      Conflicting variables from `group_vars/all/10-default.yml`:
+      Conflicting variables from `oek/group_vars/all/10-default.yml`:
         onprem_dataplane: "ovncni"
         onprem_iac_enable: True
   when:

@@ -45,11 +45,11 @@ All tests are written in [Robot Framework](https://robotframework.org/). It is a
 
 In order to to run the test suites a Test Master machine is required. It must at least support VT and have *kvm_intel* module loaded for VM management. The detailed configuration is described [here](#configuration).
 
-OpenNESS requires minimum two machines in simplest test scenarios - one controller and one (or more) worker nodes (to learn more on OpenNESS subsystem, see [architecture overview](https://github.com/otcshare/specs/blob/master/doc/architecture.md#overview)). Both Virtual and Physical machines can be used as nodes and controllers.
+OpenNESS requires minimum two machines in simplest test scenarios - one controller and one (or more) worker nodes (to learn more on OpenNESS subsystem, see [architecture overview](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/architecture.md#overview)). Both Virtual and Physical machines can be used as nodes and controllers.
 
 Physical machines should be configured to use [LVM](https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)) and should have their root filesystem mounted on a LV.
 
-Virtual Machines are managed by [libvirt](https://libvirt.org/) and qemu. At least one preconfigured VM with an OS compliant version ([supported operating systems](https://github.com/otcshare/specs/blob/master/openness_releasenotes.md#supported-operating-systems)) and meeting OpenNESS requirements shall be available on Test Machine. It will act as a base for creating virtual machines for tests, that will take role of either EdgeController or EdgeNode. All VMs will be created directly on a Test Master machine.
+Virtual Machines are managed by [libvirt](https://libvirt.org/) and qemu. At least one preconfigured VM with an OS compliant version ([supported operating systems](https://github.com/otcshare/native-on-prem/blob/master/specs/openness_releasenotes.md#supported-operating-systems)) and meeting OpenNESS requirements shall be available on Test Machine. It will act as a base for creating virtual machines for tests, that will take role of either EdgeController or EdgeNode. All VMs will be created directly on a Test Master machine.
 
 ![Component Diagram](diagrams/components.jpg)
 
@@ -185,7 +185,7 @@ The name of the bridge then needs to be provided in [env.json](#envjson-file) in
 ```
 # git clone https://github.com/otcshare/native-on-prem.git
 ```
-- Then enter to "x-test" directory
+- Then enter to "test" directory
 
 #### env.json file
 Environment specific variables must be provided in file ***test/robot/resources/variables/env.json***. You should provide a name of the base VM that you prepared in the previous step along with user and password credentials. Provide proxy settings (if necessary) for ansible scripts. Lastly don’t forget to type in github token.
@@ -202,21 +202,9 @@ In env.json file you can also specify which branch of edgenode, edgecontroller o
 
   Token used for cloning private repositories from github.
 
-- oek
-
-  URL and branch of [openness-experience-kit](https://github.com/otcshare/specs/blob/master/doc/getting-started/openness-experience-kits.md) repository.
-
-- edgenode
-
-  Branch of [edgenode](https://github.com/otcshare/specs/blob/master/doc/architecture.md#openness-edge-node) repository.
-
-- edgecontroller
-
-  Branch of [edgecontroller](https://github.com/otcshare/specs/blob/master/doc/architecture.md#openness-controller-community-edition) repository.
-
 - edgeapps
 
-  URL and branch of [edgeapps](https://github.com/otcshare/specs/blob/master/doc/applications/openness_appguide.md) repository.
+  URL and branch of [edgeapps](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/applications/openness_appguide.md) repository.
 
 - workdir
 
@@ -236,7 +224,7 @@ In env.json file you can also specify which branch of edgenode, edgecontroller o
 
   - url
 
-    Database URL. In case of SQLite backend it is a file path (this file will be created if it doesn't exist). If left empty, a default SQLite file path will be used: *x-test/robot/db/resource.db*.
+    Database URL. In case of SQLite backend it is a file path (this file will be created if it doesn't exist). If left empty, a default SQLite file path will be used: */robot/db/resource.db*.
 
 - nic_vfs_pool
 
@@ -330,7 +318,7 @@ In order to use a physical machine as an OpenNESS node it needs to be configured
 
    Here VG is named *centos* and root LV is named *root*.
 
-4) Next step is to [set the hostname](https://github.com/otcshare/specs/blob/master/doc/getting-started/network-edge/controller-edge-node-setup.md#setup-static-hostname) and [set the time](https://github.com/otcshare/specs/blob/master/doc/getting-started/network-edge/controller-edge-node-setup.md#configuring-time).
+4) Next step is to [set the hostname](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/getting-started/controller-edge-node-setup.md#setup-static-hostname) and [set the time](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/getting-started/controller-edge-node-setup.md#configuring-time).
 
 5) From the Test Master run `ssh-copy-id <physical node hostname>`.
 

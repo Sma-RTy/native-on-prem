@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright (c) 2019 Intel Corporation
+// Copyright (c) 2019-2020 Intel Corporation
 
 package grpc
 
@@ -35,7 +35,7 @@ const (
 
 	// This is the gRPC full RPC path (format: /${package}.${service}/${rpc})
 	// for the authentication endpoint. The proto is defined here:
-	// https://github.com/otcshare/specs/blob/master/schema/pb/auth.proto
+	// https://github.com/otcshare/native-on-prem/blob/master/specs/schema/pb/auth.proto
 	//
 	// This path is used to allow Appliances connected (to the EnrollmentSNI)
 	// without a valid client certificate to hit the enrollment endpoint to

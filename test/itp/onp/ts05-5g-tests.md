@@ -42,19 +42,19 @@ Copyright © 2020 Intel Corporation
 
 # ITP/ONP/05: 5G for Traffic Influence
 
-This test suite groups all test cases related to On-Prem OpenNESS 5G integration test. 
+This test suite groups all test cases related to On-Prem OpenNESS 5G integration test.
 The suite covers all major test cases that OpenNESS interacts with 5G NGC.
 [Test suite original definition](https://openness.atlassian.net/wiki/spaces/INTEL/pages/50987228/ITP+2019+12+ONP+5+On-Premises+5G+Test+Suite)
 
 Ansible Playbooks Preparation for On-Prem 5G Test
 
-The test setup uses [openness-experience-kits](https://github.com/otcshare/openness-experience-kits/) repository to build and deploy 5G CNCA, AF, NEF and OAM.  The preparation steps include:
+The test setup uses [openness-experience-kits](https://github.com/otcshare/native-on-prem/tree/master/oek) from `native-on-prem` repository to build and deploy 5G CNCA, AF, NEF and OAM.  The preparation steps include:
 
-1. git clone for  [openness-experience-kits](https://github.com/otcshare/openness-experience-kits/)  and modify inventory.ini file which Ansible uses for setting up hosts for playbooks execution.
+1. Execute `git clone` for [native-on-prem](https://github.com/otcshare/native-on-prem/) repository and modify `oek/inventory.ini` file which Ansible uses for setting up hosts for playbooks execution.
 
-2. Set `onprem_ngc_test_enable` variable to `true` in `group_vars/all/10-default.yml` file manually. 
+2. Set `onprem_ngc_test_enable` variable to `true` in `oek/group_vars/all/10-default.yml` file manually.
 
-3. Run `./deploy_onprem.sh` script. If the script in the same server with controller, need to use `ssh-keygen` and `ssh-copy-id 127.0.0.1` for SSH key.  The hostname in `/etc/hosts` need to be updated.
+3. From `oek` directory execute script: `./deploy_onprem.sh` script. If the script in the same server with controller, need to use `ssh-keygen` and `ssh-copy-id 127.0.0.1` for SSH key.  The hostname in `/etc/hosts` need to be updated.
 
 
 Test setup for on-prem openness 5G as below:
@@ -69,15 +69,15 @@ The test covers build , deploy and bring up Edge Controller, CNCA, AF, NEF and O
 
 ### Prerequisites
 
-- Repository [openness-experience-kits](https://github.com/otcshare/openness-experience-kits/) checked out . Prepare SSH key , etc/hosts as above notes.
+- Execute `git clone` for  [native-on-prem](https://github.com/otcshare/native-on-prem/) repository. Prepare SSH key, etc/hosts as above notes.
 
-- Make sure that in `group_vars/all/10-default.yml` file following variable is set to "True": `onprem_ngc_test_enable: True`.
+- Make sure that in `oek/group_vars/all/10-default.yml` file following variable is set to "True": `onprem_ngc_test_enable: True`.
 
-- `group_vars/all/10-default.yml` is set up according to the network (proxy_* and git_repo_token vars)
+- `oek/group_vars/all/10-default.yml` is set up according to the network (proxy_* and git_repo_token vars)
 
 ### Test Steps
 
-1. Execute script: ./deploy_onprem.sh controller
+1. From `oek` directory execute script: ./deploy_onprem.sh controller
 2. Script should finish with success
 3. Import certificates to web browser
 
@@ -87,7 +87,7 @@ The test covers build , deploy and bring up Edge Controller, CNCA, AF, NEF and O
 
 ```bash
 docker ps
-CONTAINER ID IMAGE         COMMAND                  CREATED        STATUS         PORTS 
+CONTAINER ID IMAGE         COMMAND                  CREATED        STATUS         PORTS
 c43dc947142d cnca:latest   "docker-entrypoint.s…"   1 day ago      Up 1 day       0.0.0.0:3020->80/tcp                                                               edgecontroller_cnca-ui_1
 d2291f668666 cups:latest   "docker-entrypoint.s…"   1 day ago      Up 1 day       0.0.0.0:3010->80/tcp                                                               edgecontroller_cups-ui_1
 2ce73ec277ac ui:latest     "docker-entrypoint.s…"   1 day ago      Up 1 day       0.0.0.0:3000->80/tcp                                                               edgecontroller_ui_1
@@ -164,8 +164,8 @@ docker logs 72ef7fed672c
 
 3. Importing certificates to web browser. From edge controller machine copy certificate (path: /etc/openness/certs/ngc/root-ca-cert.pem) to local machine where web browser is present. Import certificates in different browsers as:
    1. Google Chrome (ver 80.0.3987): Go to settings --> Under "Privacy and security" Section Click on "More" --> Select "Manage Certificates" --> in the pop up window select "Intermediate Certification Authorities" --> Select "Import" and provide the downloaded certificate file (root-ca-cert.pem).
-   2. Mozilla Firefox (ver 72.0.2): Go to options --> Under "Privacy and security" Section Click on "View Certificates..." --> Under "Authorities" section click on "import" --> Provide the certificate (root-ca-cert.pem) and import it.  
-  
+   2. Mozilla Firefox (ver 72.0.2): Go to options --> Under "Privacy and security" Section Click on "View Certificates..." --> Under "Authorities" section click on "import" --> Provide the certificate (root-ca-cert.pem) and import it.
+
 After successfully importing the certificate accessing urls `https://controller_ip:8070/ngcoam/v1/af/services, https://controller_ip:8050/af/v1/pfd/transactions` should not result into any error.
 
 
@@ -225,7 +225,7 @@ The test covers edge service Patch and delete.  The registration is based on RES
 
 ![alt text](images/itp_onp_05_03_01.png)
 
-3. Update fields - DNN with “dnn_patch” as shown below: 
+3. Update fields - DNN with “dnn_patch” as shown below:
 
 ![alt text](images/itp_onp_05_03_03.png)
 
@@ -233,7 +233,7 @@ The test covers edge service Patch and delete.  The registration is based on RES
 
 ![alt text](images/itp_onp_05_03_04.png)
 
-5. Click on the `DELETE` Button to delete the one AF service.  
+5. Click on the `DELETE` Button to delete the one AF service.
 
 ### Expected Outcome:
 
@@ -339,7 +339,7 @@ Test the transaction of Packet flow description from AF towards the UDR via NEF.
 1. OpenNESS 5G deployment successfully as in [ITP/ONP/5/01](#itponp51-deploy-openness-5g-in-onprem-mode)
 
 2. PC with web browser has IP connection with edgeController
- 
+
 ### Test Steps
 
 1. Open web browser on the PC with URL: http://[controller_IP]:3020/pfd, or click on `VIEW TRANSACTION` button. The PFD transaction list is empty as shown below:
@@ -347,7 +347,7 @@ Test the transaction of Packet flow description from AF towards the UDR via NEF.
 ![alt text](images/itp_onp_05_06_01.png)
 
 2. Click on CREATE button and Fill in PFD transaction parameters and `SAVE`  as below:
-   
+
 ![alt text](images/itp_onp_05_06_02.png)
 
 3. PFD transaction list as shown below:
@@ -355,9 +355,9 @@ Test the transaction of Packet flow description from AF towards the UDR via NEF.
 ![alt text](images/itp_onp_05_06_03.png)
 
 4. Click on `Edit` button to edit the transaction and edit the PFD as below :
-   
-![alt text](images/itp_onp_05_06_04.png)    
-   
+
+![alt text](images/itp_onp_05_06_04.png)
+
 5. Cick on SAVE. The webpage will return back to PFD transaction list successfully.
 
 ![alt text](images/itp_onp_05_06_03.png)
@@ -381,25 +381,25 @@ Test the PFD transaction application ID specific edit and delete.
 1. OpenNESS 5G deployment successfully as in [ITP/ONP/5/01](#itponp51-deploy-openness-5g-in-onprem-mode)
 
 2. PC with web browser has IP connection with edgeController.
- 
+
 ### Test Steps
 
 1. Follow the test step 1 to 3 from  [ITP/ONP/5/06](#itponp56--af---manage-pfd-transaction-of-ue-with-afnef-through-ui-interface)
-   
+
 2. Select an application ID and click Edit button as shown below.
-   
+
    ![alt text](images/itp_onp_05_07_01.png)
 
 3. Edit the PFD's of the selected Application ID as shown below and Click Save.
-   
+
    ![alt text](images/itp_onp_05_07_02.png)
 
 4. Select AppID01 from the drop down menu and click `Delete` to delete the application
-    
+
     ![alt text](images/itp_onp_05_07_01.png)
 
 5. Now click the `Edit` button the check the application ID in the transaction.
-   
+
   ![alt text](images/itp_onp_05_07_03.png)
 
 6. Click `Delete` to delete the application

@@ -1,6 +1,6 @@
 ```text
 SPDX-License-Identifier: Apache-2.0
-Copyright © 2020 Intel Corporation
+Copyright Â© 2020 Intel Corporation
 ```
 
 - [ITP/ONP/12: NIC SRIOV](#itponp12-nic-sriov)
@@ -33,7 +33,7 @@ This test will ensure that the deployed container uses a SRIOV port provided fro
 
 - NIC with SRIOV support installed on the Edge Node.
 - Controller API, UI and database installed using the ansible scripts and running.
-- Ansible scripts updated with the required SRIOV settings for On-Premises mode as outlined in [SRIOV EPA Document](https://github.com/otcshare/specs/blob/master/doc/enhanced-platform-awareness/openness-sriov-multiple-interfaces.md).
+- Ansible scripts updated with the required SRIOV settings for On-Premises mode as outlined in [SRIOV EPA Document](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-sriov-multiple-interfaces.md).
 - Edge Node installed using updated ansible scripts and running.
 - Apache server has been set up with the ansible scripts and has a container image with a working shell.
 
@@ -165,7 +165,7 @@ This test will ensure that the deployed VM uses a SRIOV port provided from the E
 
 - NIC with SRIOV support installed on the Edge Node.
 - Controller API, UI and database installed using the ansible scripts and running.
-- Ansible scripts updated with the required SRIOV supplied settings as outlined in [SRIOV EPA Document](https://github.com/otcshare/specs/blob/master/doc/enhanced-platform-awareness/openness-sriov-multiple-interfaces.md).
+- Ansible scripts updated with the required SRIOV supplied settings as outlined in [SRIOV EPA Document](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-sriov-multiple-interfaces.md).
 - Edge Node installed using ansible scripts and running.
 - Apache server has been set up with the ansible scripts and is storing a VM image with a working shell.
 
