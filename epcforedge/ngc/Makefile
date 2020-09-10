@@ -13,7 +13,7 @@ CERTS_DIR ?=/etc/certs
 
 VER:=1.0
 
-build: af nef oam cnca
+build: af nef oam
 
 af:
 	mkdir -p "${BUILD_DIR}"
@@ -27,12 +27,8 @@ oam:
 	mkdir -p "${BUILD_DIR}"
 	GOOS=linux go build -o "${BUILD_DIR}/oam" ./cmd/oam
 
-cnca:
-	mkdir -p "${BUILD_DIR}"
-	GOOS=linux go build -o "${BUILD_DIR}/cnca" ../cnca/cli
-
 lint:
-	golangci-lint run ./pkg/oam ./pkg/nef ./pkg/af ../cnca/cli/cmd
+	golangci-lint run ./pkg/oam ./pkg/nef ./pkg/af
 
 # ./scripts/genCerts.sh -t DNS -h localhost
 # Replace the "localhost" in test-unit-af with hostname
@@ -43,7 +39,7 @@ test-unit-af:	nef
 	cp -rf configs ./pkg/af
 	mkdir -p "${CERTS_DIR}"
 	./scripts/genCerts.sh -t DNS -h localhost
-	mv root-ca-cert.pem root-ca-cert.srl root-ca-key.pem server-cert.pem server-key.pem server-request.csr "${CERTS_DIR}" 
+	mv root-ca-cert.pem root-ca-cert.srl root-ca-key.pem server-cert.pem server-key.pem server-request.csr "${CERTS_DIR}"
 	./dist/nef &
 	ginkgo -v -cover ./pkg/af
 	pkill -f "nef"

@@ -10,7 +10,7 @@ import (
 	"syscall"
 
 	logger "github.com/otcshare/common/log"
-	"github.com/otcshare/epcforedge/ngc/pkg/af"
+	"github.com/otcshare/native-on-prem/epcforedge/ngc/pkg/af"
 )
 
 var log = logger.DefaultLogger.WithField("main", nil)

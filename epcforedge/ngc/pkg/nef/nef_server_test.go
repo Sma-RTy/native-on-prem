@@ -9,7 +9,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	ngcnef "github.com/otcshare/epcforedge/ngc/pkg/nef"
+	ngcnef "github.com/otcshare/native-on-prem/epcforedge/ngc/pkg/nef"
 )
 
 var _ = Describe("NefServer", func() {
