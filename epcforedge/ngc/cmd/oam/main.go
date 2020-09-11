@@ -10,8 +10,8 @@ import (
 
 	"github.com/gorilla/handlers"
 	logger "github.com/otcshare/common/log"
-	config "github.com/otcshare/epcforedge/ngc/pkg/config"
-	oam "github.com/otcshare/epcforedge/ngc/pkg/oam"
+	config "github.com/otcshare/native-on-prem/epcforedge/ngc/pkg/config"
+	oam "github.com/otcshare/native-on-prem/epcforedge/ngc/pkg/oam"
 	"golang.org/x/net/http2"
 )
 

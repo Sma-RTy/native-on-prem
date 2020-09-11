@@ -14,7 +14,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/otcshare/epcforedge/ngc/pkg/af"
+	"github.com/otcshare/native-on-prem/epcforedge/ngc/pkg/af"
 )
 
 func TestAf(t *testing.T) {

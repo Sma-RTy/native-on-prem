@@ -3,6 +3,7 @@
 #Copyright © 2019 Intel Corporation
 
 setup_dir=${PWD}
+echo "$setup_dir"
 
 set -e
 

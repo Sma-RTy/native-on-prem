@@ -1,4 +1,4 @@
-module github.com/otcshare/epcforedge
+module github.com/otcshare/native-on-prem/epcforedge
 
 go 1.12
 
