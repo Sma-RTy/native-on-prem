@@ -1,11 +1,11 @@
+#!/bin/bash
 #SPDX-License-Identifier: Apache-2.0
 #Copyright © 2020 Intel Corporation
 
-#!/bin/bash
 
-# Test Case Scenario 
+# Test Case Scenario
 # 1) PFD POST 11 transactions
-# 2) PFD GET ALL 
+# 2) PFD GET ALL
 # 3) PFD DELETE <all transactions>
 
 # Sets the config  and includes all the lib functions
@@ -24,31 +24,31 @@ while [[ $num -ne 12 ]]; do
         if send_req post 0 json/AF_NEF_PFD_POST_004.json 201; then
                 get_trans_id
                 echo -e "\t\c"
-                passed $trans_id
+                passed "$(trans_id)"
         else
-                
-		if [[ $status_code == 400 ]]; then 
+
+		if [[ $(status_code) == 400 ]]; then
                 	echo -e "\t\tMAX TRANS REACHED, POST FAILED"
                 	echo -e "\t\c"
-			passed 
+			passed
 		else
-			failed $status_code
+			failed "$(status_code)"
              	fi
         fi
         (( num++ ))
 done
 
 
-# calling send_req function for get_all request with dummy json 
+# calling send_req function for get_all request with dummy json
 # expected response 200 (no PFDs)
 echo -e "\t PFD GET ALL: \c"
 if send_req get_all 0 dummy_json 200; then
         get_all_trans
         passed
-        echo -e "\t\t TRANSACTION ID: " $trans_arr
-        
+        echo -e "\t\t TRANSACTION ID: " "$(trans_arr)"
+
 else
-        failed $status_code
+        failed "$(status_code)"
 fi
 
 num=1
@@ -56,14 +56,15 @@ num=1
 echo -e "\t DELETE PFD MAX TRANS: "
 while [[ $num -ne 11 ]]; do
         # Sending delete requests for all trans
-        transId=`echo $trans_arr | awk -v i="$num" '{print $i}'`
-        if send_req delete $transId dummy_json 204; then
+        #transId=$(echo "$(trans_arr)" | awk -v i="$num" '{print $i}')
+        transId=$(trans_arr | awk -v i=${num} '{print $i}')
+        if send_req delete "$transId" dummy_json 204; then
                 echo -e "\t\c"
-                passed $transId
+                passed "$(transId)"
         else
                 echo -e "\t\c"
-                failed $status_code
-             
+                failed "$(status_code)"
+
         fi
         (( num++ ))
 done
