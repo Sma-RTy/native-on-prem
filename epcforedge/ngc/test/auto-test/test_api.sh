@@ -78,7 +78,7 @@ get()
 			2>/dev/null)
 		else
 			out=$(curl_path  -w '\nResponse Status=%{http_code}\n' -X \
-			GET http://$nef_host:$https_port/$sub_url/"$sub_id" 2>/dev/null)
+			GET http://$nef_host:$http_port/$sub_url/"$sub_id" 2>/dev/null)
 		fi
 		status_code=$(out | grep "Response Status"  | awk \
 		'BEGIN { FS="=" } // {print $2}')
