@@ -4,7 +4,7 @@
 ---
 ### Kernel, grub & tuned configuration
 # Following settings control behavior of custom_kernel, grub and tuned roles
-# NOTE: If specific settings should be different for particular host, it should be configured using `host_vars/machine.yml`
+# NOTE: If specific settings should be different for particular host, it should be configured using `oek/host_vars/machine.yml`
 
 ## Kernel configuration
 # Skip kernel configuration

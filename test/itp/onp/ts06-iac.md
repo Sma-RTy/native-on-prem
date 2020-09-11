@@ -178,7 +178,7 @@ Check if VM can communicate with device connected with physical connection
 
 ### Test steps
 
-1. Enable OVS Inter-App Communication feature (`onprem_iac_enable` variable in `group_vars/all/10-default.yml`)
+1. Enable OVS Inter-App Communication feature (`onprem_iac_enable` variable in `oek/group_vars/all/10-default.yml`)
 2. Add physical port’s PCI address to the node specific ansible configuration file:
     - To identify the physical port, invoke: `ethtool -p >if<`
     - To get the PCI address of the interface, invoke: `lshw -c network -businfo`
