@@ -52,7 +52,7 @@ post()
 	else
 		out=$(curl_path -w '\nResponse Status=%{http_code}\n' -X POST -H \
 		"Content-Type: application/json" --data @"$1" \
-		http://$nef_host:$https_port/$sub_url 2>/dev/null)
+		http://$nef_host:$http_port/$sub_url 2>/dev/null)
 	fi
 	status_code=$(out | grep "Response Status"  | awk \
 		'BEGIN { FS="=" } // {print $2}')
@@ -100,7 +100,7 @@ get_all()
 		--http2 -X GET https://$nef_host:$https_port/$sub_url 2>/dev/null)
 	else
 		out=$(curl_path  -w '\nResponse Status=%{http_code}\n' -X GET \
-		http://$nef_host:$https_port/$sub_url 2>/dev/null)
+		http://$nef_host:$http_port/$sub_url 2>/dev/null)
 	fi
 	status_code=$(out | grep "Response Status"  | awk \
 		'BEGIN { FS="=" } // {print $2}')
@@ -128,7 +128,7 @@ put()
 		else
 			out=$(curl_path -w '\nResponse Status=%{http_code}\n' -X PUT -H \
 			"Content-Type: application/json" --data @"$1" \
-			http://$nef_host:$https_port/$sub_url/"$sub_id" 2>/dev/null)
+			http://$nef_host:$http_port/$sub_url/"$sub_id" 2>/dev/null)
 		fi
 		status_code=$(out | grep "Response Status"  | awk \
 		'BEGIN { FS="=" } // {print $2}')
@@ -161,7 +161,7 @@ patch()
 		else
 			out=$(curl_path -w '\nResponse Status=%{http_code}\n' -X PATCH -H \
 			"Content-Type: application/json" --data @"$1" \
-			http://$nef_host:$https_port/$sub_url/"$sub_id" 2>/dev/null)
+			http://$nef_host:$http_port/$sub_url/"$sub_id" 2>/dev/null)
 		fi
 		status_code=$(out | grep "Response Status"  | awk \
 		'BEGIN { FS="=" } // {print $2}')
@@ -186,7 +186,7 @@ delete()
 			-X DELETE https://$nef_host:$https_port/$sub_url/"$sub_id" 2>/dev/null)
 		else
 			out=$(curl_path -w '\nResponse Status=%{http_code}\n' -X DELETE \
-			http://$nef_host:$https_port/$sub_url/"$sub_id" 2>/dev/null)
+			http://$nef_host:$http_port/$sub_url/"$sub_id" 2>/dev/null)
         echo "$out"
 		fi
 		status_code=$(out | grep "Response Status"  | awk \
