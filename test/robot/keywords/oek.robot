@@ -29,7 +29,7 @@ Mark oek node as edgenode
     [Arguments]    ${node_name}
     Should Not Be Empty    ${node_name}
     Set To Dictionary    ${machines_info}[${node_name}]    type=edgenode
-    
+
 Setup OEK
     Copy native repo
     Update Oek Config Files
@@ -100,3 +100,10 @@ Use Command Line Settings
     [Documentation]    Use Command Line settings
     Run Keyword If    ${NON_RT_KERNEL}    Disable RT Kernel
 
+Disable RT Kernel
+    [Documentation]    Disable the real-time Kernel
+    Log    Disabling RT Kernel!    console=True
+
+    ${edgenode_group_vars_path}=    Oek.Get Group Vars File Path    group=edgenode_group
+    Utils.Set Variable In File    ${edgenode_group_vars_path}    kernel_skip    ${True}
+    Utils.Set Variable In File    ${edgenode_group_vars_path}    tuned_skip    ${True}
