@@ -71,7 +71,7 @@ The test covers build , deploy and bring up Edge Controller, CNCA, AF, NEF and O
 
 - Execute `git clone` for  [native-on-prem](https://github.com/otcshare/native-on-prem/) repository. Prepare SSH key, etc/hosts as above notes.
 
-- Make sure that in `oek/group_vars/all/10-default.yml` file following variable is set to "True": `epcforedge_git_repo: True`.
+- Make sure that in `oek/group_vars/all/10-default.yml` file following variable is set to "True": `epcforedge_enable: True`.
 
 - `oek/group_vars/all/10-default.yml` is set up according to the network (proxy_* and git_repo_token vars)
 
