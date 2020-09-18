@@ -24,7 +24,7 @@
     - role: nfd/master
       when: onprem_nfd_enable | default(True)
     - role: ngc_test/onprem/master
-      when: epcforedge_git_repo is defined
+      when: epcfpredge_enable is defined
     - role: apache
 
 - hosts: edgenode_group
