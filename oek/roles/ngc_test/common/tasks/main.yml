@@ -7,3 +7,13 @@
   file:
     name: "{{ configs_dest }}/ngc"
     state: directory
+
+- name: Synchronize epcforedge sources
+  block:
+    - name: copy sources
+      synchronize:
+        src: "{{ playbook_dir }}/../epcforedge"
+        dest: "{{ _sync_sources_dest }}/../"
+      delegate_to: localhost
+      when: always_copy_sources
+
