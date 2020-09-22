@@ -3,7 +3,7 @@
 
 module github.com/otcshare/native-on-prem/edgenode
 
-go v1.14.2
+go 1.14
 
 require (
 	github.com/blang/semver v3.5.1+incompatible // indirect
@@ -16,7 +16,7 @@ require (
 	github.com/docker/go-units v0.3.3 // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/gogo/protobuf v1.2.1 // indirect
-	github.com/golang/protobuf v1.3.3
+	github.com/golang/protobuf v1.4.2
 	github.com/google/go-cmp v0.4.0 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00 // indirect
 	github.com/gorilla/mux v1.7.0
@@ -32,8 +32,7 @@ require (
 	github.com/onsi/gomega v1.9.0
 	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
 	github.com/opencontainers/image-spec v1.0.1 // indirect
-        github.com/otcshare/native-on-prem/common/log v0.0.0-20200723113659-01a05cc87361
-        github.com/otcshare/native-on-prem/common/proxy v0.0.0-20200723113659-01a05cc87361
+	github.com/otcshare/native-on-prem/common v0.0.0-20200723161514-932c7da378e0
 	github.com/pkg/errors v0.8.1
 	github.com/sirupsen/logrus v1.6.0 // indirect
 	github.com/smartystreets/assertions v1.1.0 // indirect

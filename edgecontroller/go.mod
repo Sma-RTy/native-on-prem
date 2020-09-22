@@ -3,7 +3,7 @@
 
 module github.com/otcshare/native-on-prem/edgecontroller
 
-go 1.14.2
+go 1.14
 
 require (
 	github.com/go-sql-driver/mysql v1.5.0
