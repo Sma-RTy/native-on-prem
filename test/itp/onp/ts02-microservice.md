@@ -55,7 +55,7 @@ Verify if Consumer and Producer Sample Apps are able to communicate to Stand Alo
 
 - Edge Controller in OnPrem Mode set-up and running as described in [ITP/ONP/01/01: Deploy Edge Controller in OnPrem mode](https://github.com/otcshare/native-on-prem/test/blob/master/itp/onp/ts01-platform-setup.md#itponp0101-deploy-edge-controller-in-onprem-mode)
 - Edge Node in OnPrem Mode set-up, running and enrolled as described in [ITP/ONP/01/02: Deploy and Enroll Edge Node in OnPrem mode](https://github.com/otcshare/native-on-prem/test/blob/master/itp/onp/ts01-platform-setup.md#itponp0102-deploy-and-enroll-edge-node-in-onprem-mode)
-- Consumer and Producer Sample Apps images available in Apache HTTP Server
+- Consumer and Producer Sample Apps images (docker images build on controller machine using command `make build-docker`[on that path](https://github.com/otcshare/native-on-prem/tree/master/sample-app)) available in Apache HTTP Server
 
 ### Test steps
 
@@ -148,6 +148,7 @@ Name resolution for entries added through Controller UI and matching local.mec d
   -  [ITP/ONP/01/01: Deploy Edge Controller in OnPrem mode](https://github.com/otcshare/native-on-prem/test/blob/master/itp/onp/ts01-platform-setup.md#itponp0101-deploy-edge-controller-in-onprem-mode)
   -  [ITP/ONP/01/02: Deploy and Enroll Edge Node in OnPrem mode](https://github.com/otcshare/native-on-prem/test/blob/master/itp/onp/ts01-platform-setup.md#itponp0102-deploy-and-enroll-edge-node-in-onprem-mode)
 - Interfaces are configured(NTS and EdgeDNS are running)
+- Change nameserver to `192.168.122.1` on VM in `/etc/resolv.conf`
 
 ### Test steps
 
@@ -173,6 +174,7 @@ Name resolution for entries added through Controller UI and not matching local.m
   -  [ITP/ONP/01/01: Deploy Edge Controller in OnPrem mode](https://github.com/otcshare/native-on-prem/test/blob/master/itp/onp/ts01-platform-setup.md#itponp0101-deploy-edge-controller-in-onprem-mode)
   -  [ITP/ONP/01/02: Deploy and Enroll Edge Node in OnPrem mode](https://github.com/otcshare/native-on-prem/test/blob/master/itp/onp/ts01-platform-setup.md#itponp0102-deploy-and-enroll-edge-node-in-onprem-mode)
 - Interfaces are configured(NTS and EdgeDNS are running)
+- Change nameserver to `192.168.122.1` on VM in `/etc/resolv.conf`
 
 ### Test steps
 
@@ -234,6 +236,7 @@ Configure interface with traffic policy & start NTS
         - Source→IP Filter→End Port: 20
         - Source→IP Filter→Protocol: all
         - Target→Action: accept
+        - Destination→IP Filter→Address: 0.0.0.0
 3. Assign traffic policy to interface
     - Go to tab *NODES*
     - Click *EDIT* on the Node

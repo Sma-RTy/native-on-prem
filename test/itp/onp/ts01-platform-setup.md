@@ -257,7 +257,7 @@ Setup node with different non-RT kernel, grub parameters & tuned profiles.
     kernel_repo_url: ""
     kernel_package: kernel
     kernel_devel_package: kernel-devel
-    kernel_version: 3.10.0-1062.el7.x86_64
+    kernel_version: 3.10.0-1127.19.1.el7.x86_64
 
     tuned_packages:
     - http://linuxsoft.cern.ch/cern/centos/7/updates/x86_64/Packages/tuned-2.11.0-5.el7_7.1.noarch.rpm
@@ -269,7 +269,8 @@ Setup node with different non-RT kernel, grub parameters & tuned profiles.
 
     dpdk_kernel_devel: ""
     ```
-
+   If there will be problem with `kernel_version` use one of commands below to check if there is newer version :
+   `yum info kernel` or `yum --showduplicates list kernel`
 2. From `oek` directory execute script `./deploy_onprem.sh node` and wait until script finishes. It should end with success.
 3. Verify deployment of the node
    - `uname -r` should display `3.10.0-1062.el7.x86_64`
