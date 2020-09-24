@@ -50,7 +50,7 @@ onprem-nts: common-services appliance-nts
 onprem-ovncni: common-services appliance-cni
 
 run-onprem-nts:
-	VER=${VER} docker-compose up appliance nts eaa edgednssvr syslog-ng --no-build
+	VER=${VER} docker-compose up --no-build appliance nts eaa edgednssvr syslog-ng
 
 clean:
 	rm -rf ./dist
