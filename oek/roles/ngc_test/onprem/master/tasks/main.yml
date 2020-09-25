@@ -33,3 +33,4 @@
 
 - include_tasks: subtasks/bringup_af.yml
 
+- include_tasks: subtasks/build_ui.yml
