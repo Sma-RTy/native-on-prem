@@ -35,7 +35,7 @@
     mode: a+x
 
 - name: get list of PCI addresses of created VFs
-  shell: lspci -D | grep "Ethernet Virtual" | cut -d E -f 1 # noqa 306
+  shell: lspci -D | grep "Ethernet.*Virtual" | cut -d E -f 1 # noqa 306
   register: pci_addrs
   changed_when: false
 
@@ -84,8 +84,8 @@
   register: docker_status
 
 - block:
-  - name: get list of VF interfaces not bound to VFIO or UIO
-    shell: "{{ _dpdk_install_dir }}/usertools/dpdk-devbind.py --status | grep 'Ethernet Virtual' | grep 'unused=igb_uio' | cut -d ' ' -f 1"
+  - name: get list of VF interfaces not bound to pci-stub or UIO
+    shell: "{{ _dpdk_install_dir }}/usertools/dpdk-devbind.py --status | grep 'Ethernet.*Virtual' | grep 'unused=.*igb_uio' | grep -v 'drv=pci-stub' | cut -d ' ' -f 1"
     register: interface_addr
 
   - name: get the interface paths
