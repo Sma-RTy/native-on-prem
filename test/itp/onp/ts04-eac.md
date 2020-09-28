@@ -92,7 +92,7 @@ This test will make sure that the HDDL device file is present in the container i
     - Select *Apps*, click *DEPLOY APP*, select the EAC_App_HDDL_on from the dropdown menu and click *DEPLOY*
 3. Log onto the node
     - Run `docker inspect CONTAINER_NAME`
-    - **/var/tmp** and **/var/shm** should be in Binds and Mounts present
+    - **/var/tmp** and **/var/shm** should be present in Binds and Mounts sections
 
 ## ITP/ONP/04/03: HDDL negative test
 
@@ -129,4 +129,4 @@ This test will verify the the HDDL device file is absent in the container if the
     - Select *Apps*, click on *DEPLOY APP*, select the EAC_APP_HDDL_off from the dropdown menu and click *DEPLOY*
 3. Log onto the node
     - Run `docker inspect CONTAINER_NAME`
-    - **/var/tmp** and **/var/shm** should be in Binds and Mounts absent
+    - **/var/tmp** and **/var/shm** should be absent in Binds and Mounts sections
