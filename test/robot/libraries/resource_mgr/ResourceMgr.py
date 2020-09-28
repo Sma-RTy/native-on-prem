@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2020 Intel Corporation
 from robot.api import logger
 from robot.libraries.BuiltIn import BuiltIn
 from sqlalchemy import create_engine, event
