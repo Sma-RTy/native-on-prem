@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2020 Intel Corporation
+
 # Test Suite collects all Test Cases using a common setup and its filename is a description of a setup, e.g.:
 #  - 2 nodes, 1 controller, On-Prem, HDDL role enabled in OEK: OnPrem_2_nodes_1_controller_HDDL.robot
 #

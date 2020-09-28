@@ -1,4 +1,6 @@
 #!/bin/python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2020 Intel Corporation
 
 """
     Cron/Jenkins test execution script

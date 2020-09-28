@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2020 Intel Corporation
 from sqlalchemy import Boolean, Column, String
 
 from base import Base
