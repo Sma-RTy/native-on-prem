@@ -25,9 +25,8 @@
     mode: '0744'
 
 #TODO: Use variables(Currently defined in configure_ovn_net.sh)
-#TODO: Find a working solution for selective masquerade
 - name: Add firewall rules for OVN masquerade
-  command: firewall-cmd --zone=public --add-masquerade --permanent
+  command: firewall-cmd --permanent --zone=public --add-rich-rule='rule family=ipv4 source address=10.100.0.0/16 masquerade'
   ignore_errors: yes
   changed_when: true
 
