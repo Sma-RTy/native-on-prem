@@ -91,8 +91,8 @@ This test will make sure that the HDDL device file is present in the container i
     - Go to *Nodes* and click *EDIT* for the node that the application will be deployed on
     - Select *Apps*, click *DEPLOY APP*, select the EAC_App_HDDL_on from the dropdown menu and click *DEPLOY*
 3. Log onto the node
-    - Run `docker exec -it CONTAINER_NAME ls /dev/ion`
-    - **/dev/ion** should be present
+    - Run `docker inspect CONTAINER_NAME`
+    - **/var/tmp** and **/var/shm** should be present in Binds and Mounts sections
 
 ## ITP/ONP/04/03: HDDL negative test
 
@@ -128,5 +128,5 @@ This test will verify the the HDDL device file is absent in the container if the
     - Go to *Nodes* and click *EDIT* for the node that the application will be deployed on
     - Select *Apps*, click on *DEPLOY APP*, select the EAC_APP_HDDL_off from the dropdown menu and click *DEPLOY*
 3. Log onto the node
-    - Run `docker exec -it CONTAINER_NAME ls /dev/ion`
-    - **/dev/ion** should be absent
+    - Run `docker inspect CONTAINER_NAME`
+    - **/var/tmp** and **/var/shm** should be absent in Binds and Mounts sections
