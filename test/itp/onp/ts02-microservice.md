@@ -264,7 +264,7 @@ Configure interface with traffic policy & start NTS
       - route = prio:99,ue_ip:1.1.1.1/24,ue_port:10-20,encap_proto:noencap
     - Verify that rule is present in NTS:
       - `export NES_SERVER_CONF=/var/lib/appliance/nts/nts.cfg`
-      - `cd appliance-ce/internal/nts/client/build`
+      - `cd /opt/edgenode/internal/nts/client/build`
       - `./nes_client`
       - `Enter command: connect`
       - `Enter command: route list`
@@ -330,7 +330,7 @@ Check if new Traffic Policy is successfully assigned to application
         - verify that no error logs present
 4. Verify that rule is present in NTS:
     - `export NES_SERVER_CONF=/var/lib/appliance/nts/nts.cfg`
-    - `cd appliance-ce/internal/nts/client/build`
+    - `cd /opt/edgenode/internal/nts/client/build`
     - `./nes_client`
     - `Enter command: connect`
     - `Enter command: route list`
@@ -371,7 +371,7 @@ Check if existing Traffic Policy is removed successfully
         - verify that no error logs present
     - Verify that rule is **absent** in NTS:
         - `export NES_SERVER_CONF=/var/lib/appliance/nts/nts.cfg`
-        - `cd appliance-ce/internal/nts/client/build`
+        - `cd /opt/edgenode/internal/nts/client/build`
         - `./nes_client`
         - `Enter command: connect`
         - `Enter command: route list`

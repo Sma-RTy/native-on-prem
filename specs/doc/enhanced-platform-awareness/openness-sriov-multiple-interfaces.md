@@ -21,6 +21,8 @@ Support for providing SR-IOV interfaces to containers and virtual machines is av
 
 #### Edgenode Setup
 
+To make sure that deployment will build properly - add in `group_vars/edgenode_group/10-default.yml` under the variable `default_grub_params` line `pci=realloc`.
+
 In order to configure the number of SR-IOV VFs on the node, the `network_interfaces` variable located under `sriov` in `oek/host_vars/node01.yml` needs to be updated with the physical network interfaces on the node where the VFs should be created, along with the number of VFs to be created for each interface. The format this information should be provided in is `{interface_name: number_of_vfs, ...}`.
 
 > Note: Remember that each node must be added to the ansible inventory file `oek/inventory.ini` if they are to be deployed by the ansible scripts.
