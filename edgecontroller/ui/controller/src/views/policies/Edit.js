@@ -48,6 +48,42 @@ class PolicyView extends Component {
   //Current orchestration mode context
   static contextType = OrchestrationContext;
 
+  removeRuleIfInvalid = function (rule, index) {
+    var protocolExistsAndIsEmpty, addressExists, addressIsEmpty, addressDeletionCondition;
+
+      // delete rule.destination or rule.source if:
+      // - the .ip_filter.protocol exists and is empty
+      // - AND .ip_filter.address is either empty or does not exists
+      // that way invalid objects won't be sent to the CCE for validation (and failing), e.g.:
+      // destination/source{ ip_filter: { protocol: "" } }
+
+      if (rule.hasOwnProperty('destination') && rule.destination.hasOwnProperty('ip_filter')) {
+          protocolExistsAndIsEmpty = rule.destination.ip_filter.hasOwnProperty('protocol')
+            && rule.destination.ip_filter.protocol === ""
+
+          addressExists = rule.destination.ip_filter.hasOwnProperty('address')
+          addressIsEmpty = rule.destination.ip_filter.address === ""
+          addressDeletionCondition = !addressExists || (addressExists && addressIsEmpty)
+
+          if (protocolExistsAndIsEmpty && addressDeletionCondition) {
+            delete rule.destination
+          }
+      }
+
+      if (rule.hasOwnProperty('source') && rule.source.hasOwnProperty('ip_filter')) {
+          protocolExistsAndIsEmpty = rule.source.ip_filter.hasOwnProperty('protocol') &&
+            rule.source.ip_filter.protocol === ""
+
+          addressExists = rule.source.ip_filter.hasOwnProperty('address')
+          addressIsEmpty = rule.source.ip_filter.address === ""
+          addressDeletionCondition = !addressExists || (addressExists && addressIsEmpty)
+
+          if (protocolExistsAndIsEmpty && addressDeletionCondition) {
+            delete rule.source
+          }
+      }
+  }
+
   // GET /policies/:policy_id
   getPolicy = () => {
     const { match } = this.props;
@@ -80,8 +116,9 @@ class PolicyView extends Component {
   // PATCH /policies/:policy_id
   updatePolicy = () => {
     const { match } = this.props;
-    const { policy } = this.state;
+    var { policy } = this.state;
 
+    policy.traffic_rules.forEach(this.removeRuleIfInvalid)
     const policyID = match.params.id;
 
     ApiClient.patch(
@@ -109,7 +146,9 @@ class PolicyView extends Component {
   // POST /policies
   createPolicy = () => {
     const { history } = this.props;
-    const { policy } = this.state;
+    var { policy } = this.state;
+
+    policy.traffic_rules.forEach(this.removeRuleIfInvalid)
 
     ApiClient.post(`${this.context.apiClientPath}/policies`, policy)
       .then((resp) => {
