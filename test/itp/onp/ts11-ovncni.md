@@ -86,7 +86,7 @@ Sample Edge Apps are deployed on the Edge Node **#1** and verified if OVN CNI is
 
 ### Test steps
 
-1. Perform [ITP/ONP/02/01](ts01-platform-setup.md#itponp0201-consumer--producer-sample-apps-deployment-in-onprem-mode-with-stand-alone-eaa)
+1. Perform [ITP/ONP/02/01](./ts02-microservice.md#itponp0201-consumer--producer-sample-apps-deployment-in-onprem-mode-with-stand-alone-eaa)
 2. Additionally check:
    - `docker ps` should show two infrastructure containers (for both consumer and producer).
      Infrastructure container's name has a format: `OPENNESS-CNI-INFRASTRUCTURE_<app container id>`:
