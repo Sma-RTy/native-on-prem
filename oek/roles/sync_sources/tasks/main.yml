@@ -8,5 +8,7 @@
       synchronize:
         src: "{{ _sync_sources_dir }}/"
         dest: "{{ _sync_sources_dest }}"
+        rsync_opts:
+          - "--exclude=artifacts"
       delegate_to: localhost
       when: always_copy_sources
