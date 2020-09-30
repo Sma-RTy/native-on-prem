@@ -25,7 +25,7 @@
 - name: online build cnca UI docker images
   block:
     - name: create temporary custom .openness_gitconfig
-      include_tasks: ../../../../../../../oek/roles/git_repo/tasks/gitconfig_bootstrap.yml
+      include_tasks: roles/sync_sources/tasks/gitconfig_bootstrap.yml
     - name: build controllers cnca docker images
       make:
         chdir: "{{ git_repo_epcforedge_dir }}/cnca/ui"
@@ -35,7 +35,7 @@
         msg: "{{ build_cnca_ui_images_output.stdout }}"
   always:
     - name: remove temporary .openness_gitconfig
-      include_tasks: ../../../../../../../oek/roles/git_repo/tasks/gitconfig_remove.yml
+      include_tasks: roles/sync_sources/tasks/gitconfig_remove.yml
 
 - name: start controllers cnca UI docker images
   make:
