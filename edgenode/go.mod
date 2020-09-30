@@ -32,7 +32,7 @@ require (
 	github.com/onsi/gomega v1.9.0
 	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
 	github.com/opencontainers/image-spec v1.0.1 // indirect
-	github.com/open-ness/native-on-prem/common v0.0.0-20200723161514-932c7da378e0
+	github.com/open-ness/native-on-prem/common v0.0.0-20200930153831-c5c3e82b5b38
 	github.com/pkg/errors v0.8.1
 	github.com/sirupsen/logrus v1.6.0 // indirect
 	github.com/smartystreets/assertions v1.1.0 // indirect
