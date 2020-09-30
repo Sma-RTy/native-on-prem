@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright (c) 2019 Intel Corporation
+
+syntax = "proto3";
+
+package example;
+
+option go_package="pb";
+
+import "google/protobuf/wrappers.proto";
+
+service HelloService {
+    rpc SayHello (google.protobuf.StringValue) returns (google.protobuf.StringValue) {}
+}
+
+service GoodbyeService {
+    rpc SayGoodbye (google.protobuf.StringValue) returns (google.protobuf.StringValue) {}
+}

@@ -1,0 +1,141 @@
+```text
+SPDX-License-Identifier: Apache-2.0
+Copyright (c) 2019-2020 Intel Corporation
+```
+
+# OpenNESS Quick Start
+
+   ## <b>OnPremises Edge</b>
+   ### <b>Step 1.</b> Get Hardware &#9658; <b>Step 2.</b> [Getting started](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/getting-started/controller-edge-node-setup.md) &#9658; <b>Step 3.</b> [Applications Onboarding](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications-onboard/on-premises-applications-onboarding.md)
+
+# OpenNESS solution documentation index
+
+Below is the complete list of OpenNESS solution documentation
+
+## Architecture
+
+* [<b>architecture.md</b>: OpenNESS Architecture overview](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/architecture.md)
+
+## Getting Started - Setup
+
+* [<b>getting-started</b>: Folder containing how to get started with installing and trying OpenNESS OnPremises solution](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/getting-started)
+   * [<b>openness-experience-kits.md</b>: Overview of the OpenNESS Experience kits that are used to install the OnPremises Edge solution](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/getting-started/openness-experience-kits.md)
+   * [<b>controller-edge-node-setup.md</b>: Started here for installing and trying OpenNESS OnPremises Edge](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/getting-started/controller-edge-node-setup.md)
+   * [<b>openness-gateway.md:</b> OpenNESS Gateway support for deploying edge platform and Controller on separate IP Subnet](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/getting-started/openness-gateway.md)
+   * [<b>supported-epa.md</b>: List of Silicon and Software EPA features that are supported in OpenNESS OnPremises Edge](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/getting-started/supported-epa.md)
+
+## Application onboarding - Deployment
+
+* [<b>applications-onboard</b>: Now that you have installed OpenNESS platform start in this folder to onboard sample application on OpenNESS Network or OnPremises Edge](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications-onboard)
+   * [<b>on-premises-applications-onboarding.md</b>: Steps for onboarding sample application on OpenNESS OnPremises Edge](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications-onboard/on-premises-applications-onboarding.md)
+   * [<b>openness-edgedns.md</b>: Using edge DNS service](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications-onboard/openness-edgedns.md)
+   * [<b>using-openness-cnca.md</b>: Steps for configuring 4G CUPS or 5G Application Function for Edge deployment for OnPremises Edge](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications-onboard/using-openness-cnca.md)
+   * [<b>openness-eaa.md</b>: Edge Application Agent: Description of Edge Application APIs and Edge Application Authentication APIs](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications-onboard/openness-eaa.md)
+
+## Core Network - 4G and 5G
+
+* [<b>core-network</b>: Folder containing details of 4G CUPS and 5G edge cloud deployment support](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/core-network)
+   * [<b>openness_epc.md</b>: Whitepaper detailing the 4G CUPS support for Edge cloud deployment in OpenNESS for OnPremises Edge](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/core-network/openness_epc.md)
+   * [<b>openness_ngc.md</b>: Whitepaper detailing the 5G Edge Cloud deployment support in OpenNESS for OnPremises Edge](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/core-network/openness_ngc.md)
+
+## Enhanced Platform Awareness
+
+* [<b>enhanced-platform-awareness</b>: Folder containing individual Silicon and Software EPA that are features that are supported in OpenNESS OnPremises and Network Edge](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness)
+   * [<b>openness-hugepage.md</b>: Hugepages support for Edge Applications and Network Functions](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-hugepage.md)
+   * [<b>openness-node-feature-discovery.md</b>: Edge Node hardware and software feature discovery support in OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-node-feature-discovery.md)
+   * [<b>openness-sriov-multiple-interfaces.md</b>: Dedicated Physical Network interface allocation support for Edge Applications and Network Functions](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-sriov-multiple-interfaces.md)
+   * [<b>openness-dedicated-core.md</b>: Dedicated CPU core allocation support for Edge Applications and Network Functions](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-dedicated-core.md)
+   * [<b>openness_hddl.md</b>: Using Intel® Movidius™ Myriad™ X High Density Deep Learning (HDDL) solution in OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness_hddl.md)
+   * [<b>openness-environment-variables.md</b>: Environment Variable configuration support in OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-environment-variables.md)
+   * [<b>openness-tunable-exec.md</b>: Configurable startup command support for containers in OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-tunable-exec.md)
+   *  [<b>openness-port-forward.md</b>: Support for setting up port forwarding of a container in OpenNESS On-Prem mode](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-port-forward.md)
+   *  [<b>openness-shared-storage.md</b>: Shared storage for containers in OpenNESS On-Prem mode](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/enhanced-platform-awareness/openness-shared-storage.md)
+
+## Dataplane
+
+* [<b>dataplane</b>: Folder containing Dataplane and inter-app infrastructure support in OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/dataplane)
+   * [<b>openness-interapp.md</b>: InterApp Communication support in OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/dataplane/openness-interapp.md)
+   * [<b>openness-ovn.md</b>: OpenNESS Support for OVS as dataplane with OVN](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/dataplane/openness-ovn.md)
+   * [<b>openness-nts.md</b>: Dataplane support for Edge Cloud between ENB and EPC (S1-U) Deployment](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/dataplane/openness-nts.md)
+
+## Edge Applications
+
+* [<b>applications</b>: Folder Containing resource material for Edge Application developers](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications)
+   * [<b>openness_appguide.md</b>: How to develop or Port existing cloud application to the Edge cloud based on OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications/openness_appguide.md)
+   * [<b>openness_ovc.md</b>: Open Visual Cloud Smart City reference Application for OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications/openness_ovc.md)
+   * [<b>openness_openvino.md</b>: AI inference reference Edge application for OpenNESS](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications/openness_openvino.md)
+
+## Cloud Adapters
+
+* [<b>cloud-adapters</b>: How to deploy public cloud IoT gateways on OpenNESS Edge Cloud](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/cloud-adapters)
+     * [<b>openness_awsgreengrass.md</b>: Deploying single or multiple instance of Amazon Greengrass IoT gateway on OpenNESS edge cloud as an edge application](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/cloud-adapters/openness_awsgreengrass.md)
+     * [<b>openness_baiducloud.md</b>: Deploying single or multiple instance of Baidu IoT gateway on OpenNESS edge cloud as an edge application](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/cloud-adapters/openness_baiducloud.md)
+
+## API and Schema
+
+* [<b>Edge Application API: EAA</b>](https://www.openness.org/api-documentation/?api=eaa)
+* [<b>Edge Application Authentication API</b>](https://www.openness.org/api-documentation/?api=auth)
+* [<b>OnPremises Controller API: EAA</b>](https://www.openness.org/api-documentation/?api=controller)
+* [<b>Core Network Configuration API</b>](https://www.openness.org/api-documentation/?api=cups)
+* [<b>Edge Lifecycle Management API: ELA</b>](https://github.com/open-ness/native-on-prem/blob/master/specs/schema/pb/ela.proto)
+* [<b>Edge Virtualization Infrastructure API: EVA</b>](https://github.com/open-ness/native-on-prem/blob/master/specs/schema/pb/eva.proto)
+* [<b>schema</b>: Folder containing APIs protobuf or schema for varios endpoints in OpenNESS solution](https://github.com/open-ness/native-on-prem/blob/master/specs/schema)
+
+## Release history
+
+* [<b>openness_releasenotes.md</b>: This document provides high level system features, issues and limitations information for OpenNESS](openness_releasenotes.md)
+
+## Related resources
+
+* [<b>OpenNESS Website - Developers </b>: Website containing developer resources](https://www.openness.org/developers)
+* [<b>Intel Network Builders OpenNESS training </b>](https://builders.intel.com/university/networkbuilders/coursescategory/open-network-edge-services-software-openness)
+
+## List of Abbreviations
+
+- 3GPP: Third Generation Partnership Project
+- CUPS: Control and User Plane Separation of EPC Nodes
+- AF: Application Function
+- API: Application Programming Interface
+- APN: Access Point Name
+- EPC: Evolved Packet Core
+- ETSI: European Telecommunications Standards Institute
+- FQDN: Fully Qualified Domain Name
+- HTTP: Hyper Text Transfer Protocol
+- IMSI: International Mobile Subscriber Identity
+- JSON:	JavaScript Object Notation
+- MEC: Multi-Access Edge Computing
+- OpenNESS: Open Network Edge Services Software
+- LTE: Long-Term Evolution
+- MCC: Mobile Country Code
+- MME: Mobility Management Entity
+- MNC: Mobile Network Code
+- NEF: Network Exposure Function
+- OAM: Operations, Administration and Maintenance
+- PDN: Packet Data Network
+- PFCP: Packet Forwarding Control Protocol- SGW: Serving Gateway- PGW: PDN Gateway
+- PGW-C: PDN Gateway - Control Plane Function
+- PGW-U: PDN Gateway - User Plane Function
+- REST: REpresentational State Transfer
+- SGW-C: Serving Gateway - Control Plane Function
+- SGW-U: Serving Gateway - User Plane Function
+- TAC: Tracking Area Code
+- UE: User Equipment (in the context of LTE)
+- VIM: Virtual Infrastructure Manager
+- UUID: Universally Unique IDentifier
+- AMF: Access and Mobility Mgmt Function
+- SMF: Session Management Function
+- AUSF: Authentication Server Function
+- NEF: Network Exposure Function
+- NRF: Network function Repository Function
+- UDM: Unified Data Management
+- PCF: Policy Control Function
+- UPF: User Plane Function
+- DN: Data Network
+- AF: Application Function
+- SR-IOV: Single Root I/O Virtualization
+- NUMA: Non-Uniform Memory Access
+- COTS: Commercial Off-The-Shelf
+- DU: Distributed Unit of RAN
+- CU: Centralized Unit of RAN
+- OEK: OpenNESS Experience Kit
+- IDO: Intel Distribution of OpenNESS

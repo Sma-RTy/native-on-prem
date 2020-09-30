@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright © 2019 Intel Corporation
+
+---
+
+configs_dest: /etc/openness/configs
+certs_dest: /etc/openness/certs
+
+git_repo_epcforedge_dir: /opt/epcforedge
+
+git_repo_ngc_dir:  "{{ git_repo_epcforedge_dir }}/ngc"
+git_repo_ngc_dist_dir: "{{ git_repo_ngc_dir }}/dist"
+git_repo_ngc_build_dir: "{{ git_repo_ngc_dir }}/build"
+
+controller_name: "{{ groups['controller_group'][0] }}"
+controller_ip: "{{ hostvars[groups['controller_group'][0]]['ansible_host'] }}"

@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2019-2020 Intel Corporation
+
+# TODO: Expose ports only to a local network address
+version: '2.4'
+services:
+
+  hddlservice:
+    container_name: openvino-hddl-service
+    build:
+      context: .
+    image: "hddlservice:${VER}"
+    cap_add:
+     - SYS_ADMIN
+    security_opt:
+     - no-new-privileges:false
+    volumes:
+     - "/dev:/dev"
+     - "/dev/shm:/dev/shm"
+     - "/var/tmp:/var/tmp"
+    environment:
+     - LOCAL_SYSLOG=192.168.122.1:514
+    device_cgroup_rules:
+     - 'c 10:* rmw'
+     - 'c 89:* rmw'
+     - 'c 189:* rmw'
+     - 'c 180:* rmw'
+    network_mode: host
+    read_only: true

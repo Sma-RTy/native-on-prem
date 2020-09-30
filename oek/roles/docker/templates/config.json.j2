@@ -1,0 +1,13 @@
+{
+  "proxies": {
+    "default": {
+{% if proxy_http is defined and proxy_http|length %}
+        "httpProxy": "{{ proxy_http }}",
+{% endif %}
+{% if proxy_https is defined and proxy_https|length %}
+        "httpsProxy": "{{ proxy_https }}",
+{% endif %}
+        "noProxy": "{{ ansible_host }},{{ proxy_noproxy }}"
+    }
+  }
+}

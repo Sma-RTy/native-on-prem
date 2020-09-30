@@ -1,0 +1,16 @@
+{
+    "LogLevel": "info",
+    "UseSyslog": false,
+    "SyslogAddr": "",
+    "Enrollment": {
+        "Endpoint": "",
+        "CertsDirectory": "certs",
+        "ConnectionTimeout": "2s"
+    },
+    "Services": {
+        "github.com/open-ness/native-on-prem/edgenode/pkg/eaa": "configs/eaa.json",
+        "github.com/open-ness/native-on-prem/edgenode/pkg/ela": "configs/ela.json",
+        "github.com/open-ness/native-on-prem/edgenode/pkg/eda": "configs/eda.json",
+        "github.com/open-ness/native-on-prem/edgenode/pkg/eva": "configs/eva.json"
+    }
+}

@@ -1,0 +1,83 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2019-2020 Intel Corporation
+
+version: "3.4"
+
+services:
+  mysql:
+    image: mysql:8.0
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    ports:
+      - 8083:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+    read_only: true
+    tmpfs:
+      - /run/mysqld:uid=999,gid=999
+      - /tmp
+    volumes:
+      - ./artifacts/db:/var/lib/mysql
+  cce:
+    image: cce:latest
+    read_only: true
+    build:
+      context: .
+      dockerfile: docker/build/Dockerfile
+      args:
+        GITHUB_TOKEN: "${GITHUB_TOKEN}"
+    depends_on:
+      - mysql
+    command: "${CCE_FLAGS}"
+    ports:
+      - 8080:8080
+      - 8081:8081
+      - 6514:6514
+      - 8125:8125
+    volumes:
+      - ./artifacts/controller:/artifacts
+  ui:
+    image: ui:latest
+    read_only: true
+    build:
+      context: ./ui/controller
+      args:
+        CCE_ORCHESTRATION_MODE: "${CCE_ORCHESTRATION_MODE}"
+        REACT_APP_CONTROLLER_API: "${REACT_APP_CONTROLLER_API}"
+        REACT_APP_ORCHESTRATION_MODE: "${CCE_ORCHESTRATION_MODE}"
+        LANDING_UI_URL: "${LANDING_UI_URL}"
+    ports:
+      - 3000:80/tcp
+    environment:
+      CCE_ORCHESTRATION_MODE: "${CCE_ORCHESTRATION_MODE}"
+      REACT_APP_CONTROLLER_API: "${REACT_APP_CONTROLLER_API}"
+      REACT_APP_ORCHESTRATION_MODE: "${CCE_ORCHESTRATION_MODE}"
+      LANDING_UI_URL: "${LANDING_UI_URL}"
+  landing-ui:
+    image: landing:latest
+    build:
+      context: ./ui/landing
+      args:
+        REACT_APP_CONTROLLER_API: "${REACT_APP_CONTROLLER_API}"
+        CONTROLLER_UI_URL: "${INFRASTRUCTURE_UI_URL}"
+        CUPS_UI_URL: "${CUPS_UI_URL}"
+        CNCA_UI_URL: "${CNCA_UI_URL}"
+    ports:
+      - 3030:80/tcp
+    environment:
+      REACT_APP_CONTROLLER_API: "${REACT_APP_CONTROLLER_API}"
+      CONTROLLER_UI_URL: "${INFRASTRUCTURE_UI_URL}"
+      CUPS_UI_URL: "${CUPS_UI_URL}"
+      CNCA_UI_URL: "${CNCA_UI_URL}"
+  nfd-master:
+    image: nfd-master:latest
+    read_only: true
+    build:
+      context: .
+      dockerfile: nfd-master/Dockerfile
+    restart: on-failure:15
+    ports:
+      - 8082:8082/tcp
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+    volumes:
+      - ./artifacts/controller/certificates/ca:/ca

@@ -1,0 +1,109 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2019-2020 Intel Corporation
+
+---
+# This file contains variables intended to be configured by user.
+# It allows feature enabling and configuration.
+# Per-host variables should be places in `oek/host_vars` directory.
+# Features should not be configured by changing roles' defaults (i.e. role/defaults/main.yml)
+
+##################################################
+##### User settings
+
+### GitHub token
+# It must be provided when using private repositories.
+# Not required when using github.com/open-ness repositories.
+# How to create a GitHub token: https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
+git_repo_token: ""
+
+### Proxy settings
+# Setup proxy on the machine - required if the Internet is accessible via proxy
+proxy_enable: false
+# Clear previous proxy settings
+proxy_remove_old: true
+# Proxy URLs to be used for HTTP, HTTPS and FTP
+proxy_http: "http://proxy.example.org:3128"
+proxy_https: "http://proxy.example.org:3129"
+proxy_ftp: "http://proxy.example.org:3128"
+# Proxy to be used by YUM (/etc/yum.conf)
+proxy_yum: "{{ proxy_http }}"
+# No proxy setting contains addresses and networks that should not be accessed using proxy (e.g. local network, Kubernetes CNI networks)
+proxy_noproxy: ""
+
+# Disable YUM plugins (e.g. Fastest Mirror)
+os_remove_yum_plugins: true
+
+##################################################
+##### On Premises
+
+### OpenNESS Git Directories (edgenode, edgecontroller)
+# If True, then sources will be copied/updated
+# If False, sources will be left as it is and any changes won't be overwritten.
+always_copy_sources: True
+
+### Network Time Protocol (NTP)
+# Enable machine's time synchronization with NTP server
+ntp_enable: false
+# Servers to be used by NTP instead of the default ones (e.g. 0.centos.pool.ntp.org)
+ntp_servers: []
+
+### Kernel, grub & tuned configuration
+# Kernel, grub & tuned configurations are machine-type specific:
+# - Edge Nodes - edit `oek/group_vars/edgenode_group/10-default.yml`
+# - Edge Controller - edit `oek/group_vars/controller_group/10-default.yml`
+# To provide configuration for specific machine, place the settings in `oek/host_vars/_inventory_host_name.yml`
+
+### Retry settings for network-based tasks
+# - number_of_retries - configures how many times failed task should be retried
+# - retry_delay - configures delay between retries (in seconds)
+number_of_retries: 10
+retry_delay: 5
+
+### Controller settings
+# Password for Controller's database
+mysql_root_password: "pass"
+# Password for Controller UI/REST API
+cce_admin_password: "pass"
+# Log level for Edge Controller
+cce_log_level: "debug"
+
+### On Premises dataplane
+# Dataplane to be used for On-Premises mode
+# Available dataplanes:
+# - nts
+# - ovncni
+onprem_dataplane: "nts"
+
+### NTS DPDK settings
+# Amount of hugepages to use on 1st NUMA node (in MB)
+docker_nts_mem_mb_s0: "2048"
+# Amount of hugepages to use on 2nd NUMA node (in MB)
+docker_nts_mem_mb_s1: "0"
+
+### OVNCNI DPDK settings
+# Hugepage configuration for NUMA nodes in MB, i.e. "1st_numa_memory,2nd_numa_memory"
+ovncni_dpdk_socket_mem: "1024,0"
+# Core bitmask for datapath packet processing. 0x4 selects core 2
+ovncni_dpdk_pmd_cpu_mask: "0x4"
+# Core bitmask for DPDK initialization. 0x2 selects core 1
+ovncni_dpdk_lcore_mask: "0x2"
+# Memory limit for OVNCNI's OVS container
+ovncni_dpdk_resource_limits: 1G
+
+### On-Premises InterApp-Communication
+# WARNING: Only for deployment with NTS dataplane
+onprem_iac_enable: false
+# Core bitmask for DPDK initialization.
+iac_ovs_cores_hex: "0x10"
+# Hugepage configuration for NUMA nodes in MB, i.e. "1st_numa_memory,2nd_numa_memory"
+iac_ovs_socket_mem: "1024,0"
+
+### HTTP server on the Edge Controller
+# IP address that should be used instead of Controller's IP from inventory
+ip_address: ""
+
+## On-Premises HDDL
+onprem_hddl_enable: False
+
+## On-Premises Node Feature Discovery (NFD)
+onprem_nfd_enable: True

@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2019-2020 Intel Corporation
+
+---
+- name: Synchronize sources
+  block:
+    - name: copy sources
+      synchronize:
+        src: "{{ _sync_sources_dir }}/"
+        dest: "{{ _sync_sources_dest }}"
+        rsync_opts:
+          - "--exclude=artifacts"
+      delegate_to: localhost
+      when: always_copy_sources
