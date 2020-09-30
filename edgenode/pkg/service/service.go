@@ -14,6 +14,8 @@ import (
 	"sync"
 	"syscall"
 
+	"github.com/pkg/errors"
+
 	logger "github.com/otcshare/native-on-prem/common/log"
 	"github.com/otcshare/native-on-prem/edgenode/pkg/config"
 	"github.com/otcshare/native-on-prem/edgenode/pkg/util"
@@ -51,6 +53,31 @@ func init() {
 
 }
 
+// InitConfig load configuration from cfg file
+func InitConfig() error {
+	err := config.LoadJSONConfig(cfgPath, &Cfg)
+	if err != nil {
+		return errors.Wrapf(err,
+			"Failed to load config: %s", cfgPath)
+	}
+
+	if Cfg.UseSyslog {
+		err = logger.ConnectSyslog(Cfg.SyslogAddr)
+		if err != nil && err.Error() != "syslog already dialed" {
+			return errors.Wrapf(err,
+				"Failed to connect to syslog: %s", Cfg.SyslogAddr)
+		}
+	}
+
+	lvl, err := logger.ParseLevel(Cfg.LogLevel)
+	if err != nil {
+		return errors.Wrapf(err,
+			"Failed to parse log level: %s", Cfg.LogLevel)
+	}
+	logger.SetLevel(lvl)
+	return nil
+}
+
 // WaitForServices waits for services to finish
 func WaitForServices(wg *sync.WaitGroup,
 	errors <-chan error, cancel context.CancelFunc) bool {
@@ -84,26 +111,10 @@ func RunServices(services []StartFunction) bool {
 	var wg sync.WaitGroup
 
 	flag.Parse()
-	err := config.LoadJSONConfig(cfgPath, &Cfg)
-	if err != nil {
-		Log.Errf("Failed to load config: %s", err.Error())
+	if err := InitConfig(); err != nil {
+		Log.Errf("InitConfig failed %v\n", err)
 		os.Exit(1)
 	}
-
-	if Cfg.UseSyslog {
-		err = logger.ConnectSyslog(Cfg.SyslogAddr)
-		if err != nil {
-			Log.Errf("Failed to connect to syslog: %s", err.Error())
-			os.Exit(1)
-		}
-	}
-
-	lvl, err := logger.ParseLevel(Cfg.LogLevel)
-	if err != nil {
-		Log.Errf("Failed to parse log level: %s", err.Error())
-		os.Exit(1)
-	}
-	logger.SetLevel(lvl)
 
 	// Handle SIGINT and SIGTERM by calling cancel()
 	// which is propagated to services

@@ -4,16 +4,21 @@
 package main
 
 import (
-	"os"
-	"time"
-
+	"flag"
 	"github.com/otcshare/native-on-prem/edgenode/pkg/auth"
 	"github.com/otcshare/native-on-prem/edgenode/pkg/service"
+	"os"
+	"time"
 )
 
 const enrollBackoff = time.Second * 10
 
 func main() {
+	flag.Parse()
+	if err := service.InitConfig(); err != nil {
+		service.Log.Errf("InitConfig failed %v\n", err)
+		os.Exit(1)
+	}
 	for {
 		if err := auth.Enroll(service.Cfg.Enroll.CertsDir, service.Cfg.Enroll.Endpoint,
 			service.Cfg.Enroll.ConnTimeout.Duration, auth.EnrollClient{}); err != nil {
