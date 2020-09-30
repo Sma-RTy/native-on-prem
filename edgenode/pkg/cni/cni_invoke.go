@@ -14,7 +14,7 @@ import (
 	"strings"
 
 	"github.com/kata-containers/runtime/virtcontainers/pkg/nsenter"
-	evapb "github.com/otcshare/native-on-prem/edgenode/pkg/eva/pb"
+	evapb "github.com/open-ness/native-on-prem/edgenode/pkg/eva/pb"
 )
 
 var (

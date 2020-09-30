@@ -6,7 +6,7 @@ FROM golang:1.12-alpine
 
 ENV GO111MODULE on
 
-WORKDIR /go/src/github.com/otcshare/native-on-prem/edgecontroller
+WORKDIR /go/src/github.com/open-ness/native-on-prem/edgecontroller
 
 RUN apk add --no-cache git=2.24.3-r0
 

@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"time"
 
-	pb "github.com/otcshare/native-on-prem/edgenode/pkg/eva/internal_pb"
+	pb "github.com/open-ness/native-on-prem/edgenode/pkg/eva/internal_pb"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )

@@ -3,7 +3,7 @@
 
 package eaa
 
-import "github.com/otcshare/native-on-prem/edgenode/pkg/util"
+import "github.com/open-ness/native-on-prem/edgenode/pkg/util"
 
 // CertsInfo describes paths for certs used in configuration
 type CertsInfo struct {

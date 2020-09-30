@@ -7,10 +7,10 @@ import (
 	"context"
 	"net"
 
-	logger "github.com/otcshare/native-on-prem/common/log"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/config"
-	pb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/util"
+	logger "github.com/open-ness/native-on-prem/common/log"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/config"
+	pb "github.com/open-ness/native-on-prem/edgenode/pkg/ela/pb"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/util"
 	"google.golang.org/grpc"
 )
 

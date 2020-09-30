@@ -155,7 +155,7 @@ OpenNESS provides ansible scripts for setting up NGC components for two scenario
 
 ### Bringing up NGC components in On-Premises mode
 
-  To bring-up the NGC components in on-premises mode, enable the rule `ngc_test/onprem/master` in the file: `oek/on_premises.yml`. and then run the script `deploy_onprem.sh controller`  as described in [OpenNESS On-Premise: Controller and Edge node setup document](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/getting-started/controller-edge-node-setup.md).
+  To bring-up the NGC components in on-premises mode, enable the rule `ngc_test/onprem/master` in the file: `oek/on_premises.yml`. and then run the script `deploy_onprem.sh controller`  as described in [OpenNESS On-Premise: Controller and Edge node setup document](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/getting-started/controller-edge-node-setup.md).
 
 ### Configuring in On-Premises mode
 

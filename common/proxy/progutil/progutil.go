@@ -8,7 +8,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	logger "github.com/otcshare/native-on-prem/common/log"
+	logger "github.com/open-ness/native-on-prem/common/log"
 	"io"
 	"net"
 	"sync"

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/otcshare/native-on-prem/common/log"
+	"github.com/open-ness/native-on-prem/common/log"
 )
 
 func TestDefaultLoggerSetOutput(t *testing.T) {

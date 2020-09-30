@@ -9,9 +9,9 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/ela/helpers"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/ela/ini"
-	pb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/ela/helpers"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/ela/ini"
+	pb "github.com/open-ness/native-on-prem/edgenode/pkg/ela/pb"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

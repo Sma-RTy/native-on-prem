@@ -15,7 +15,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	ngcnef "github.com/otcshare/native-on-prem/epcforedge/ngc/pkg/nef"
+	ngcnef "github.com/open-ness/native-on-prem/epcforedge/ngc/pkg/nef"
 )
 
 //const validCfgPath = "../../configs/nef.json"

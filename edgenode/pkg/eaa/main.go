@@ -14,9 +14,9 @@ import (
 	"os"
 	"path/filepath"
 
-	logger "github.com/otcshare/native-on-prem/common/log"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/config"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/util"
+	logger "github.com/open-ness/native-on-prem/common/log"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/config"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/util"
 )
 
 type services map[string]Service

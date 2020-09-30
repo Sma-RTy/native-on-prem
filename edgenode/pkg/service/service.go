@@ -16,9 +16,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	logger "github.com/otcshare/native-on-prem/common/log"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/config"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/util"
+	logger "github.com/open-ness/native-on-prem/common/log"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/config"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/util"
 )
 
 // StartFunction is func typedef for starting service

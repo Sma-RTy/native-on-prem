@@ -10,7 +10,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/util"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/util"
 )
 
 func TestUtil(t *testing.T) {

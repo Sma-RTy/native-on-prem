@@ -8,10 +8,10 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/otcshare/native-on-prem/edgenode/internal/wrappers"
-	metadata "github.com/otcshare/native-on-prem/edgenode/pkg/app-metadata"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/cni"
-	pb "github.com/otcshare/native-on-prem/edgenode/pkg/eva/pb"
+	"github.com/open-ness/native-on-prem/edgenode/internal/wrappers"
+	metadata "github.com/open-ness/native-on-prem/edgenode/pkg/app-metadata"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/cni"
+	pb "github.com/open-ness/native-on-prem/edgenode/pkg/eva/pb"
 
 	"github.com/docker/docker/api/types"
 	libvirt "github.com/libvirt/libvirt-go"

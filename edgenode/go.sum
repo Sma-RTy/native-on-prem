@@ -130,8 +130,8 @@ github.com/opencontainers/go-digest v1.0.0-rc1/go.mod h1:cMLVZDEM3+U2I4VmLI6N8jQ
 github.com/opencontainers/go-digest v1.0.0 h1:apOUWs51W5PlhuyGyz9FCeeBIOUDA/6nW8Oi/yOhh5U=
 github.com/opencontainers/go-digest v1.0.0/go.mod h1:0JzlMkj0TRzQZfJkVvzbP0HBR3IKzErnv2BNG4W4MAM=
 github.com/opencontainers/image-spec v1.0.1/go.mod h1:BtxoFyWECRxE4U/7sNtV5W15zMzWCbyJoFRP3s7yZA0=
-github.com/otcshare/native-on-prem/common v0.0.0-20200723161514-932c7da378e0 h1:d9W8NOd9T2f0+aoa+kWGFJfIHUvNnAfncL+tPeCUQck=
-github.com/otcshare/native-on-prem/common v0.0.0-20200723161514-932c7da378e0/go.mod h1:peLg+3bMpwH3JHSn09/+NbHtoZMKx41E1JQea6CSUS4=
+github.com/open-ness/native-on-prem/common v0.0.0-20200723161514-932c7da378e0 h1:d9W8NOd9T2f0+aoa+kWGFJfIHUvNnAfncL+tPeCUQck=
+github.com/open-ness/native-on-prem/common v0.0.0-20200723161514-932c7da378e0/go.mod h1:peLg+3bMpwH3JHSn09/+NbHtoZMKx41E1JQea6CSUS4=
 github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=

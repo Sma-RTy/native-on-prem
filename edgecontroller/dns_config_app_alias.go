@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/otcshare/native-on-prem/edgecontroller/uuid"
+	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
 )
 
 // DNSConfigAppAlias represents an association between a DNSConfig and an AppID.

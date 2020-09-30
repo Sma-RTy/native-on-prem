@@ -19,8 +19,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/otcshare/native-on-prem/edgenode/pkg/auth"
-	pb "github.com/otcshare/native-on-prem/edgenode/pkg/auth/pb"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/auth"
+	pb "github.com/open-ness/native-on-prem/edgenode/pkg/auth/pb"
 )
 
 func TestEnroll(t *testing.T) {

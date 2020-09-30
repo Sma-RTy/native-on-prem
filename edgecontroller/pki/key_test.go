@@ -18,7 +18,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/otcshare/native-on-prem/edgecontroller/pki"
+	"github.com/open-ness/native-on-prem/edgecontroller/pki"
 )
 
 var _ = Describe("Key Persistence", func() {
@@ -33,7 +33,7 @@ var _ = Describe("Key Persistence", func() {
 		By("Creating a temp directory for test artifacts")
 		tmpDir = filepath.Join(
 			os.TempDir(),
-			"github.com/otcshare/native-on-prem/edgecontroller/pki/key_test",
+			"github.com/open-ness/native-on-prem/edgecontroller/pki/key_test",
 		)
 		keyFile = filepath.Join(tmpDir, "key.pem")
 

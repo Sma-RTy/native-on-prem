@@ -15,6 +15,6 @@ This feature enables the user to set up external network ports for their applica
 To take advantage of this feature, all you have to do is fill in the port and protocol fields during application creation.
 OpenNESS will pass that information down to Docker, and assuming all goes well, when you start this container your ports will be exposed.
 
-For more details on the application onboarding (including other fields to set), please refer to [Application Onboarding Document](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/applications-onboard/on-premises-applications-onboarding.md).
+For more details on the application onboarding (including other fields to set), please refer to [Application Onboarding Document](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/applications-onboard/on-premises-applications-onboarding.md).
 
 > Note: Port forward feature for Legacy OnPremises is not supported when using OVN-CNI.

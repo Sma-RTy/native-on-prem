@@ -12,7 +12,7 @@ import (
 	"syscall"
 	"time"
 
-	logger "github.com/otcshare/native-on-prem/common/log"
+	logger "github.com/open-ness/native-on-prem/common/log"
 )
 
 var log = logger.DefaultLogger.WithField("hddl", nil)

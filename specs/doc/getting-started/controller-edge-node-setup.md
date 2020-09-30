@@ -100,7 +100,7 @@ onprem_dataplane: "ovncni"
 
 ## Manual steps
 
-> *Ansible Controller* is a machine with [native-on-prem](https://github.com/otcshare/native-on-prem) repo and it's used to configure *Edge Controller* and *Edge Nodes*. Please be careful not to confuse them.
+> *Ansible Controller* is a machine with [native-on-prem](https://github.com/open-ness/native-on-prem) repo and it's used to configure *Edge Controller* and *Edge Nodes*. Please be careful not to confuse them.
 
 After the deployment scripts are run there are still some manual steps required to setup the environment.
 

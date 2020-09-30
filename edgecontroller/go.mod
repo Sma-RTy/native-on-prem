@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright (c) 2019-2020 Intel Corporation
 
-module github.com/otcshare/native-on-prem/edgecontroller
+module github.com/open-ness/native-on-prem/edgecontroller
 
 go 1.14
 
@@ -14,7 +14,7 @@ require (
 	github.com/joho/godotenv v1.3.0
 	github.com/onsi/ginkgo v1.12.2
 	github.com/onsi/gomega v1.10.1
-	github.com/otcshare/native-on-prem/common v0.0.0-20200723161514-932c7da378e0
+	github.com/open-ness/native-on-prem/common v0.0.0-20200723161514-932c7da378e0
 	github.com/pkg/errors v0.8.1
 	github.com/satori/go.uuid v1.2.0
 	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a

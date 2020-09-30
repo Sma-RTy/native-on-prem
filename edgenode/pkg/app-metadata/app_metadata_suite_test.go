@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	. "github.com/otcshare/native-on-prem/edgenode/internal/metadatahelpers"
-	metadata "github.com/otcshare/native-on-prem/edgenode/pkg/app-metadata"
-	pb "github.com/otcshare/native-on-prem/edgenode/pkg/eva/pb"
+	. "github.com/open-ness/native-on-prem/edgenode/internal/metadatahelpers"
+	metadata "github.com/open-ness/native-on-prem/edgenode/pkg/app-metadata"
+	pb "github.com/open-ness/native-on-prem/edgenode/pkg/eva/pb"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/otcshare/native-on-prem/edgecontroller/uuid"
+	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
 )
 
 // TODO: Entire project: Rename all instance of `network_interface` to `interface`

@@ -12,9 +12,9 @@ import (
 	. "github.com/onsi/gomega"
 	"google.golang.org/grpc"
 
-	"github.com/otcshare/native-on-prem/common/proxy/progutil"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/ela"
-	pb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
+	"github.com/open-ness/native-on-prem/common/proxy/progutil"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/ela"
+	pb "github.com/open-ness/native-on-prem/edgenode/pkg/ela/pb"
 )
 
 var _ = Describe("gRPC InterfacePolicyService", func() {

@@ -9,12 +9,12 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	edgednspb "github.com/otcshare/native-on-prem/edgenode/pkg/edgedns/pb"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/ela"
-	elapb "github.com/otcshare/native-on-prem/edgenode/pkg/ela/pb"
+	edgednspb "github.com/open-ness/native-on-prem/edgenode/pkg/edgedns/pb"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/ela"
+	elapb "github.com/open-ness/native-on-prem/edgenode/pkg/ela/pb"
 
-	"github.com/otcshare/native-on-prem/common/log"
-	"github.com/otcshare/native-on-prem/common/proxy/progutil"
+	"github.com/open-ness/native-on-prem/common/log"
+	"github.com/open-ness/native-on-prem/common/proxy/progutil"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

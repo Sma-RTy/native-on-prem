@@ -1,4 +1,4 @@
-module github.com/otcshare/native-on-prem/common
+module github.com/open-ness/native-on-prem/common
 
 go 1.14
 

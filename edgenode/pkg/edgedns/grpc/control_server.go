@@ -12,11 +12,11 @@ import (
 	"net"
 	"path/filepath"
 
-	edgedns "github.com/otcshare/native-on-prem/edgenode/pkg/edgedns"
+	edgedns "github.com/open-ness/native-on-prem/edgenode/pkg/edgedns"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	logger "github.com/otcshare/native-on-prem/common/log"
-	"github.com/otcshare/native-on-prem/edgenode/pkg/edgedns/pb"
+	logger "github.com/open-ness/native-on-prem/common/log"
+	"github.com/open-ness/native-on-prem/edgenode/pkg/edgedns/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials"

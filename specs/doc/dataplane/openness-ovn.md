@@ -42,7 +42,7 @@ For On Premises mode OVS/OVN can be used in place of the default On Premises dat
 To distinguish it from OVS InterApp this dataplane is often referred to as OVN CNI.
 OVN CNI supports both virtual machines and docker containers.
 
-For information on deploying On Premises mode with OVS/OVN instead of NTS refer to [On Premises setup guide](https://github.com/otcshare/native-on-prem/blob/master/specs/doc/getting-started/controller-edge-node-setup.md#dataplanes).
+For information on deploying On Premises mode with OVS/OVN instead of NTS refer to [On Premises setup guide](https://github.com/open-ness/native-on-prem/blob/master/specs/doc/getting-started/controller-edge-node-setup.md#dataplanes).
 
 OVNCNI plugin has been implemented as the CNI for OpenNESS in On-Premises mode. The plugin has been developed based on the specifications provided as part of the [CNCF](https://www.cncf.io/) project. OVNCNI provides network connectivity for Edge applications on the OpenNESS Edge nodes. The applications can be deployed as Docker containers or VMs and are exposed to client applications by Docker services.
 

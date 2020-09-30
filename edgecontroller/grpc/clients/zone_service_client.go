@@ -7,8 +7,8 @@ import (
 	"context"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/otcshare/native-on-prem/edgecontroller/grpc"
-	elapb "github.com/otcshare/native-on-prem/edgecontroller/pb/ela"
+	"github.com/open-ness/native-on-prem/edgecontroller/grpc"
+	elapb "github.com/open-ness/native-on-prem/edgecontroller/pb/ela"
 	"github.com/pkg/errors"
 )
 

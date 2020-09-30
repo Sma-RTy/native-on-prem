@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/otcshare/native-on-prem/edgecontroller/uuid"
+	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
 )
 
 // Node is a node (aka appliance or device).
