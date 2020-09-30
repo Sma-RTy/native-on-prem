@@ -201,7 +201,7 @@ type Port struct {
 	LBPMAC           string           `ini:"lbp-mac,omitempty"`
 	MTU              uint16           `ini:"MTU,omitempty"`
 
-	Routes []string `ini:"route,omitempty" delim:"|"`
+	Routes []string `ini:"route,omitempty,allowshadow" delim:"|"`
 }
 
 // TrafficDirectionFromInterfaceType find traffic direction

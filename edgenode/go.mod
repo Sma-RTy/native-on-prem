@@ -41,7 +41,7 @@ require (
 	go.etcd.io/bbolt v1.3.5
 	google.golang.org/genproto v0.0.0-20200722002428-88e341933a54
 	google.golang.org/grpc v1.30.0
-	gopkg.in/ini.v1 v1.57.0
+	gopkg.in/ini.v1 v1.42.0
 )
 
 replace github.com/docker/docker => github.com/docker/engine v0.0.0-20190423201726-d2cfbce3f3b0
