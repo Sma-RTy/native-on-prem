@@ -113,6 +113,8 @@ services:
       - "/var/lib/appliance/configs/syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf:ro"
       - "/var/lib/appliance/certs:/etc/syslog-ng/certs:ro"
       - "/var/log/appliance:/var/log"
+    environment:
+     - HOST_HOSTNAME=${HOSTNAME}
 
     command: "--no-caps"
     extra_hosts:
