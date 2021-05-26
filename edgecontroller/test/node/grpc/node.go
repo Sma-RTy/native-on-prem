@@ -22,12 +22,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/open-ness/native-on-prem/common/log"
-	"github.com/open-ness/native-on-prem/common/proxy/progutil"
-	nodegmock "github.com/open-ness/native-on-prem/edgecontroller/mock/node/grpc"
-	elapb "github.com/open-ness/native-on-prem/edgecontroller/pb/ela"
-	evapb "github.com/open-ness/native-on-prem/edgecontroller/pb/eva"
-	"github.com/open-ness/native-on-prem/edgecontroller/pki"
+	"github.com/Sma-RTy/native-on-prem/common/log"
+	"github.com/Sma-RTy/native-on-prem/common/proxy/progutil"
+	nodegmock "github.com/Sma-RTy/native-on-prem/edgecontroller/mock/node/grpc"
+	elapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/ela"
+	evapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/eva"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/pki"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )

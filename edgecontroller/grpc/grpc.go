@@ -12,9 +12,9 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 
-	logger "github.com/open-ness/native-on-prem/common/log"
-	elapb "github.com/open-ness/native-on-prem/edgecontroller/pb/ela"
-	evapb "github.com/open-ness/native-on-prem/edgecontroller/pb/eva"
+	logger "github.com/Sma-RTy/native-on-prem/common/log"
+	elapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/ela"
+	evapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/eva"
 )
 
 var log = logger.DefaultLogger.WithField("pkg", "grpc")

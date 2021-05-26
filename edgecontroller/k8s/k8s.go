@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/uuid"
 	"github.com/pkg/errors"
 	appsV1 "k8s.io/api/apps/v1"
 	autoscalingV1 "k8s.io/api/autoscaling/v1"

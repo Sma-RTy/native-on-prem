@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/uuid"
 )
 
 // TrafficPolicy is an application or interface traffic policy.

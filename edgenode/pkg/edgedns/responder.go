@@ -10,7 +10,7 @@ import (
 	"syscall"
 
 	"github.com/miekg/dns"
-	logger "github.com/open-ness/native-on-prem/common/log"
+	logger "github.com/Sma-RTy/native-on-prem/common/log"
 )
 
 var log = logger.DefaultLogger.WithField("edgedns", nil)

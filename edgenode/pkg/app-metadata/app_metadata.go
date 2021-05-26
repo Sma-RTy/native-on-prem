@@ -10,8 +10,8 @@ import (
 	"os"
 	"path"
 
-	logger "github.com/open-ness/native-on-prem/common/log"
-	pb "github.com/open-ness/native-on-prem/edgenode/pkg/eva/pb"
+	logger "github.com/Sma-RTy/native-on-prem/common/log"
+	pb "github.com/Sma-RTy/native-on-prem/edgenode/pkg/eva/pb"
 	"github.com/pkg/errors"
 )
 

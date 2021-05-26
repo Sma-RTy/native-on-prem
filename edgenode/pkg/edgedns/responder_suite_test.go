@@ -14,9 +14,9 @@ import (
 	"github.com/onsi/ginkgo/config"
 	. "github.com/onsi/gomega"
 
-	"github.com/open-ness/native-on-prem/edgenode/pkg/edgedns"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/edgedns/grpc"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/edgedns/storage"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/edgedns"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/edgedns/grpc"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/edgedns/storage"
 )
 
 var dnsServer *edgedns.Responder

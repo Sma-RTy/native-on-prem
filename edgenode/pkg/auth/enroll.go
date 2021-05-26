@@ -16,8 +16,8 @@ import (
 	"path/filepath"
 	"time"
 
-	logger "github.com/open-ness/native-on-prem/common/log"
-	pb "github.com/open-ness/native-on-prem/edgenode/pkg/auth/pb"
+	logger "github.com/Sma-RTy/native-on-prem/common/log"
+	pb "github.com/Sma-RTy/native-on-prem/edgenode/pkg/auth/pb"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	grpcCreds "google.golang.org/grpc/credentials"

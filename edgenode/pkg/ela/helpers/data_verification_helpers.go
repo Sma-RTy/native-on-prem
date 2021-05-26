@@ -10,7 +10,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	pb "github.com/open-ness/native-on-prem/edgenode/pkg/ela/pb"
+	pb "github.com/Sma-RTy/native-on-prem/edgenode/pkg/ela/pb"
 )
 
 // VerifyAddressMask verifies IP address and mask pair

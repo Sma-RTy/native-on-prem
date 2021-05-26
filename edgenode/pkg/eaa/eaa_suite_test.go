@@ -34,11 +34,11 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/gorilla/websocket"
-	"github.com/open-ness/native-on-prem/edgenode/internal/authtest"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/eaa"
-	evapb "github.com/open-ness/native-on-prem/edgenode/pkg/eva/internal_pb"
+	"github.com/Sma-RTy/native-on-prem/edgenode/internal/authtest"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/eaa"
+	evapb "github.com/Sma-RTy/native-on-prem/edgenode/pkg/eva/internal_pb"
 
-	"github.com/open-ness/native-on-prem/common/log"
+	"github.com/Sma-RTy/native-on-prem/common/log"
 )
 
 // EaaCommonName Common Name that EAA uses for TLS connection

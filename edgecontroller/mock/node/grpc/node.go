@@ -4,8 +4,8 @@
 package grpc
 
 import (
-	elapb "github.com/open-ness/native-on-prem/edgecontroller/pb/ela"
-	evapb "github.com/open-ness/native-on-prem/edgecontroller/pb/eva"
+	elapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/ela"
+	evapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/eva"
 )
 
 // MockNode provides a mock node gRPC server.

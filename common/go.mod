@@ -1,4 +1,4 @@
-module github.com/open-ness/native-on-prem/common
+module github.com/Sma-RTy/native-on-prem/common
 
 go 1.14
 

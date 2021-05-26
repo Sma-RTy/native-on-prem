@@ -3,8 +3,9 @@
 
 FROM alpine:3.12.0 AS edgedns-deps-image
 
-RUN printf "http://nl.alpinelinux.org/alpine/v3.12/main\nhttp://nl.alpinelinux.org/alpine/v3.12/community" >> /etc/apk/repositories
-RUN apk add --no-cache sudo=1.9.0-r0
+RUN printf "http://nl.alpinelinux.org/alpine/v3.12/main\nhttp://nl.alpinelinux.org/alpine/v3.12/community\nhttp://dl-cdn.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositories
+RUN apk add --no-cache binutils=2.32-r0
+#RUN apk add --no-cache sudo=1.9.0-r0
 
 FROM edgedns-deps-image
 

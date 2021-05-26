@@ -18,7 +18,7 @@ import (
 
 	"github.com/kata-containers/runtime/virtcontainers/pkg/nsenter"
 
-	pb "github.com/open-ness/native-on-prem/edgenode/pkg/ela/pb"
+	pb "github.com/Sma-RTy/native-on-prem/edgenode/pkg/ela/pb"
 	"github.com/pkg/errors"
 )
 

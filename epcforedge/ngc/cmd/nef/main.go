@@ -9,8 +9,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	logtool "github.com/open-ness/common/log"
-	ngcnef "github.com/open-ness/native-on-prem/epcforedge/ngc/pkg/nef"
+	logtool "github.com/Sma-RTy/common/log"
+	ngcnef "github.com/Sma-RTy/native-on-prem/epcforedge/ngc/pkg/nef"
 )
 
 // Log handler initialized. This is to be used for NEF Main

@@ -6,7 +6,7 @@ package clients_test
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
 )
 
 var _ = Describe("DNS Service Client", func() {

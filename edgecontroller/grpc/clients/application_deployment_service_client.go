@@ -8,9 +8,9 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
-	"github.com/open-ness/native-on-prem/edgecontroller/grpc"
-	evapb "github.com/open-ness/native-on-prem/edgecontroller/pb/eva"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/grpc"
+	evapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/eva"
 	"github.com/pkg/errors"
 )
 

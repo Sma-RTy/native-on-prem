@@ -4,7 +4,7 @@
 package swagger
 
 import (
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
 )
 
 // PolicySummary is a summary of an application traffic policy or interface traffic policy.

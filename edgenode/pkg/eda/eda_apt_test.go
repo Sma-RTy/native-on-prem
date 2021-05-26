@@ -11,9 +11,9 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	log "github.com/open-ness/native-on-prem/common/log"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/eda"
-	pb "github.com/open-ness/native-on-prem/edgenode/pkg/ela/pb"
+	log "github.com/Sma-RTy/native-on-prem/common/log"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/eda"
+	pb "github.com/Sma-RTy/native-on-prem/edgenode/pkg/ela/pb"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

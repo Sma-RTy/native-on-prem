@@ -6,8 +6,8 @@ package clients_test
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	elapb "github.com/open-ness/native-on-prem/edgecontroller/pb/ela"
-	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
+	elapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/ela"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/uuid"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

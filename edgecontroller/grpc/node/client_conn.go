@@ -7,9 +7,9 @@ import (
 	"context"
 	"crypto/tls"
 
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
-	"github.com/open-ness/native-on-prem/edgecontroller/grpc"
-	gclients "github.com/open-ness/native-on-prem/edgecontroller/grpc/clients"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/grpc"
+	gclients "github.com/Sma-RTy/native-on-prem/edgecontroller/grpc/clients"
 	ggrpc "google.golang.org/grpc"
 )
 

@@ -11,7 +11,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/open-ness/native-on-prem/edgenode/pkg/ela"
+	. "github.com/Sma-RTy/native-on-prem/edgenode/pkg/ela"
 )
 
 var _ = Describe("MacProvider", func() {

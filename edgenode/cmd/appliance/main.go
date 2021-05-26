@@ -5,8 +5,8 @@ package main
 
 import (
 	"flag"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/auth"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/service"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/auth"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/service"
 	"os"
 	"time"
 )

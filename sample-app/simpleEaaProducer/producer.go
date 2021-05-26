@@ -9,7 +9,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/open-ness/edgeapps/applications/sample-app/common"
+	"github.com/Sma-RTy/edgeapps/applications/sample-app/common"
 	"github.com/pkg/errors"
 )
 

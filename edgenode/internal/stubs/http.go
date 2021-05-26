@@ -6,7 +6,7 @@ package stubs
 import (
 	"net/http"
 
-	"github.com/open-ness/native-on-prem/edgenode/internal/wrappers"
+	"github.com/Sma-RTy/native-on-prem/edgenode/internal/wrappers"
 )
 
 // HTTPCliStub stores HTTPClientStub

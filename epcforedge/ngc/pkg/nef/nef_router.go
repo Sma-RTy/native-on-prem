@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	oauth2 "github.com/open-ness/native-on-prem/epcforedge/ngc/pkg/oauth2"
+	oauth2 "github.com/Sma-RTy/native-on-prem/epcforedge/ngc/pkg/oauth2"
 )
 
 // Route : Structure which describes HTTP Request Handler type and other

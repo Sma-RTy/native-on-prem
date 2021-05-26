@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/docker/docker/api/types/container"
-	"github.com/open-ness/native-on-prem/edgenode/internal/stubs"
-	"github.com/open-ness/native-on-prem/edgenode/internal/wrappers"
+	"github.com/Sma-RTy/native-on-prem/edgenode/internal/stubs"
+	"github.com/Sma-RTy/native-on-prem/edgenode/internal/wrappers"
 
 	"github.com/docker/docker/api/types"
 

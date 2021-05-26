@@ -15,7 +15,7 @@ import (
 	"net"
 
 	"github.com/containernetworking/cni/pkg/skel"
-	. "github.com/open-ness/native-on-prem/edgenode/pkg/ovncni"
+	. "github.com/Sma-RTy/native-on-prem/edgenode/pkg/ovncni"
 )
 
 func createNamespace(nsName string) error {

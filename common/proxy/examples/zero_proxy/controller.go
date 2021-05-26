@@ -8,7 +8,7 @@ package main
 import (
 	"context"
 	"fmt"
-	logger "github.com/open-ness/native-on-prem/common/log"
+	logger "github.com/Sma-RTy/native-on-prem/common/log"
 	"log"
 	"log/syslog"
 	"net"
@@ -20,8 +20,8 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/golang/protobuf/ptypes/wrappers"
-	"github.com/open-ness/native-on-prem/common/proxy/examples/zero_proxy/pb"
-	"github.com/open-ness/native-on-prem/common/proxy/progutil"
+	"github.com/Sma-RTy/native-on-prem/common/proxy/examples/zero_proxy/pb"
+	"github.com/Sma-RTy/native-on-prem/common/proxy/progutil"
 )
 
 var lastCallSucceeded = false

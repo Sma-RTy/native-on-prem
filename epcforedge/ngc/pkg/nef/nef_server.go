@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	logtool "github.com/open-ness/common/log"
+	logtool "github.com/Sma-RTy/common/log"
 	"golang.org/x/net/http2"
 )
 

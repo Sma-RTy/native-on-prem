@@ -8,7 +8,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/open-ness/edgeapps/applications/sample-app/common"
+	"github.com/Sma-RTy/edgeapps/applications/sample-app/common"
 	"github.com/pkg/errors"
 )
 

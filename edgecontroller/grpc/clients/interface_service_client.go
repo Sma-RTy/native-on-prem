@@ -7,9 +7,9 @@ import (
 	"context"
 
 	"github.com/golang/protobuf/ptypes/empty"
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
-	"github.com/open-ness/native-on-prem/edgecontroller/grpc"
-	elapb "github.com/open-ness/native-on-prem/edgecontroller/pb/ela"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/grpc"
+	elapb "github.com/Sma-RTy/native-on-prem/edgecontroller/pb/ela"
 	"github.com/pkg/errors"
 )
 

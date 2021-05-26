@@ -10,8 +10,8 @@ import (
 	"io/ioutil"
 	"time"
 
-	logger "github.com/open-ness/native-on-prem/common/log"
-	"github.com/open-ness/native-on-prem/edgenode/internal/wrappers"
+	logger "github.com/Sma-RTy/native-on-prem/common/log"
+	"github.com/Sma-RTy/native-on-prem/edgenode/internal/wrappers"
 
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/container"

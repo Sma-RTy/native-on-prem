@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/open-ness/native-on-prem/common/log"
+	"github.com/Sma-RTy/native-on-prem/common/log"
 )
 
 func TestSignalVerbosityChanges(t *testing.T) {

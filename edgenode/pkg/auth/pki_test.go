@@ -22,7 +22,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/open-ness/native-on-prem/edgenode/pkg/auth"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/auth"
 )
 
 func TestPKI(t *testing.T) {

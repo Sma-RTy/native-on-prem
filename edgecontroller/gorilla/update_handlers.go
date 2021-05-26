@@ -7,7 +7,7 @@ import (
 	"context"
 	"net/http"
 
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

@@ -9,7 +9,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/uuid"
 
 	coreV1 "k8s.io/api/core/v1"
 	networkingV1 "k8s.io/api/networking/v1"

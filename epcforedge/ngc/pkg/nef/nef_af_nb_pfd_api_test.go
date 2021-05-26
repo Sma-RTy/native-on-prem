@@ -15,7 +15,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	ngcnef "github.com/open-ness/native-on-prem/epcforedge/ngc/pkg/nef"
+	ngcnef "github.com/Sma-RTy/native-on-prem/epcforedge/ngc/pkg/nef"
 )
 
 const basePFDAPIURL = "http://localhost:8091/3gpp-pfd-management/" +

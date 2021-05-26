@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"reflect"
 
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
 	uuid "github.com/satori/go.uuid"
 )
 

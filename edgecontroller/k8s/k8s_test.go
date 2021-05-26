@@ -15,8 +15,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
-	"github.com/open-ness/native-on-prem/edgecontroller/k8s"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/k8s"
 	"k8s.io/client-go/tools/clientcmd"
 )
 

@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
 )
 
 func handleCreateNodesApps(ctx context.Context, ps cce.PersistenceService, e cce.Persistable) error {

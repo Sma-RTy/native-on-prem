@@ -10,9 +10,9 @@ import (
 	"os"
 	"testing"
 
-	log "github.com/open-ness/native-on-prem/common/log"
-	"github.com/open-ness/native-on-prem/edgenode/internal/authtest"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/ela"
+	log "github.com/Sma-RTy/native-on-prem/common/log"
+	"github.com/Sma-RTy/native-on-prem/edgenode/internal/authtest"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/ela"
 	"google.golang.org/grpc/credentials"
 
 	"time"

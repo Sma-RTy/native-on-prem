@@ -4,7 +4,7 @@
 package swagger
 
 import (
-	cce "github.com/open-ness/native-on-prem/edgecontroller"
+	cce "github.com/Sma-RTy/native-on-prem/edgecontroller"
 )
 
 // AppSummary is a summary representation of the app.

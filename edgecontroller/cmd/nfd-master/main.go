@@ -6,8 +6,8 @@ package main
 import (
 	"context"
 	"flag"
-	logger "github.com/open-ness/native-on-prem/common/log"
-	"github.com/open-ness/native-on-prem/edgecontroller/nfd-master"
+	logger "github.com/Sma-RTy/native-on-prem/common/log"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/nfd-master"
 	"os"
 	"os/signal"
 	"syscall"

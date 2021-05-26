@@ -7,8 +7,8 @@ import (
 	"os"
 
 	// Imports required to run agent
-	"github.com/open-ness/native-on-prem/edgenode/pkg/eaa"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/service"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/eaa"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/service"
 )
 
 // EdgeServices array contains function pointers to services start functions

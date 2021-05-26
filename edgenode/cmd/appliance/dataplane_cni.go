@@ -6,9 +6,9 @@
 package main
 
 import (
-	"github.com/open-ness/native-on-prem/edgenode/pkg/ela"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/eva"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/service"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/ela"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/eva"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/service"
 )
 
 // EdgeServices array contains function pointers to services start functions

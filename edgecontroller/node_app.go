@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/uuid"
 )
 
 // NodeApp represents an association between a Node and an App.

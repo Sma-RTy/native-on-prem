@@ -9,9 +9,9 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	gclients "github.com/open-ness/native-on-prem/edgecontroller/grpc/clients"
-	ctrlgmock "github.com/open-ness/native-on-prem/edgecontroller/mock/controller/grpc"
-	nodegmock "github.com/open-ness/native-on-prem/edgecontroller/mock/node/grpc"
+	gclients "github.com/Sma-RTy/native-on-prem/edgecontroller/grpc/clients"
+	ctrlgmock "github.com/Sma-RTy/native-on-prem/edgecontroller/mock/controller/grpc"
+	nodegmock "github.com/Sma-RTy/native-on-prem/edgecontroller/mock/node/grpc"
 )
 
 var (

@@ -10,8 +10,8 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/open-ness/native-on-prem/edgenode/pkg/ela/ini"
-	pb "github.com/open-ness/native-on-prem/edgenode/pkg/ela/pb"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/ela/ini"
+	pb "github.com/Sma-RTy/native-on-prem/edgenode/pkg/ela/pb"
 	"github.com/pkg/errors"
 
 	"github.com/docker/docker/api/types"

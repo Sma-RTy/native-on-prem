@@ -9,7 +9,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/open-ness/native-on-prem/edgecontroller/uuid"
+	"github.com/Sma-RTy/native-on-prem/edgecontroller/uuid"
 )
 
 // DNSConfig is a DNS configuration.

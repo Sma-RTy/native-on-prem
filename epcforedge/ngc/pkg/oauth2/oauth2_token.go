@@ -12,7 +12,7 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 
-	logger "github.com/open-ness/common/log"
+	logger "github.com/Sma-RTy/common/log"
 )
 
 var log = logger.DefaultLogger.WithField("oauth2", nil)

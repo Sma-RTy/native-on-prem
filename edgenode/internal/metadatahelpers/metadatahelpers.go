@@ -10,7 +10,7 @@ import (
 	"os"
 	"path/filepath"
 
-	metadata "github.com/open-ness/native-on-prem/edgenode/pkg/app-metadata"
+	metadata "github.com/Sma-RTy/native-on-prem/edgenode/pkg/app-metadata"
 
 	"github.com/onsi/ginkgo"
 )

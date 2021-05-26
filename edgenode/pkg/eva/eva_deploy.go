@@ -30,11 +30,11 @@ import (
 
 	libvirtxml "github.com/libvirt/libvirt-go-xml"
 
-	"github.com/open-ness/native-on-prem/edgenode/internal/wrappers"
-	metadata "github.com/open-ness/native-on-prem/edgenode/pkg/app-metadata"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/cni"
-	pb "github.com/open-ness/native-on-prem/edgenode/pkg/eva/pb"
-	"github.com/open-ness/native-on-prem/edgenode/pkg/ovncni"
+	"github.com/Sma-RTy/native-on-prem/edgenode/internal/wrappers"
+	metadata "github.com/Sma-RTy/native-on-prem/edgenode/pkg/app-metadata"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/cni"
+	pb "github.com/Sma-RTy/native-on-prem/edgenode/pkg/eva/pb"
+	"github.com/Sma-RTy/native-on-prem/edgenode/pkg/ovncni"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc/codes"
