@@ -14,7 +14,7 @@ require (
 	github.com/joho/godotenv v1.3.0
 	github.com/onsi/ginkgo v1.12.2
 	github.com/onsi/gomega v1.10.1
-	github.com/Sma-RTy/native-on-prem/common v0.0.0-20200930153831-c5c3e82b5b38
+	github.com/Sma-RTy/native-on-prem/common v0.0.0-20210526162528-8737005c1011
 	github.com/pkg/errors v0.8.1
 	github.com/satori/go.uuid v1.2.0
 	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a
